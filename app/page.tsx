@@ -107,7 +107,7 @@ export default function ExpatDeFiLandingPage() {
       <main id="top">
         <section className="relative overflow-hidden border-b border-slate-100 bg-[linear-gradient(to_bottom,white,rgba(248,250,252,0.7))]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(99,102,241,0.12),transparent_32%),radial-gradient(circle_at_80%_20%,rgba(14,165,233,0.10),transparent_22%),radial-gradient(circle_at_50%_100%,rgba(15,23,42,0.05),transparent_28%)]" />
-          <div className="relative mx-auto grid max-w-7xl gap-16 px-6 py-12 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-16">
+          <div className="relative mx-auto grid max-w-7xl gap-16 px-6 pt-8 pb-16 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:pt-10 lg:pb-20">
             <div className="flex flex-col justify-center">
               <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-slate-700 shadow-sm">
                 Conseil premium pour profils internationaux et entrepreneurs mobiles
