@@ -89,10 +89,18 @@ export default function ExpatDeFiLandingPage() {
           </a>
 
           <nav className="hidden items-center gap-8 md:flex">
-            <a href="#services" className="text-sm text-slate-600 transition hover:text-slate-950">Services</a>
-            <a href="#simulator" className="text-sm text-slate-600 transition hover:text-slate-950">Simulateur</a>
-            <a href="#method" className="text-sm text-slate-600 transition hover:text-slate-950">Méthode</a>
-            <a href="#faq" className="text-sm text-slate-600 transition hover:text-slate-950">FAQ</a>
+            <a href="#services" className="text-sm text-slate-600 transition hover:text-slate-950">
+              Services
+            </a>
+            <a href="/simulateur" className="text-sm text-slate-600 transition hover:text-slate-950">
+              Simulateur
+            </a>
+            <a href="#method" className="text-sm text-slate-600 transition hover:text-slate-950">
+              Méthode
+            </a>
+            <a href="#faq" className="text-sm text-slate-600 transition hover:text-slate-950">
+              FAQ
+            </a>
           </nav>
 
           <a
@@ -107,14 +115,16 @@ export default function ExpatDeFiLandingPage() {
       <main id="top">
         <section className="relative overflow-hidden border-b border-slate-100 bg-[linear-gradient(to_bottom,white,rgba(248,250,252,0.7))]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(99,102,241,0.12),transparent_32%),radial-gradient(circle_at_80%_20%,rgba(14,165,233,0.10),transparent_22%),radial-gradient(circle_at_50%_100%,rgba(15,23,42,0.05),transparent_28%)]" />
-          <div className="relative mx-auto grid max-w-7xl gap-16 px-6 pt-8 pb-16 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:pt-10 lg:pb-20">
+          <div className="relative mx-auto grid max-w-7xl gap-16 px-6 pb-16 pt-8 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:pb-20 lg:pt-10">
             <div className="flex flex-col justify-center">
               <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-slate-700 shadow-sm">
                 Conseil premium pour profils internationaux et entrepreneurs mobiles
               </div>
+
               <h1 className="max-w-3xl text-5xl font-semibold tracking-tight text-slate-950 sm:text-6xl">
                 Une approche claire pour vos projets d'expatriation et vos enjeux patrimoniaux nouvelle génération.
               </h1>
+
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
                 Nous aidons les profils exigeants à structurer leurs décisions internationales, à clarifier leurs flux, à comprendre les usages de la finance décentralisée et à agir avec méthode.
               </p>
@@ -127,7 +137,7 @@ export default function ExpatDeFiLandingPage() {
                   Demander un diagnostic
                 </a>
                 <a
-                  href="#simulator"
+                  href="/simulateur"
                   className="rounded-full border border-slate-300 bg-white px-6 py-3 text-center text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:bg-slate-50"
                 >
                   Tester le simulateur
@@ -140,7 +150,10 @@ export default function ExpatDeFiLandingPage() {
                   ["Pédagogique", "sans jargon inutile"],
                   ["Structuré", "orienté décision"],
                 ].map(([value, label]) => (
-                  <div key={label} className="rounded-[24px] border border-slate-200 bg-white p-4 shadow-sm">
+                  <div
+                    key={label}
+                    className="rounded-[24px] border border-slate-200 bg-white p-4 shadow-sm"
+                  >
                     <p className="text-lg font-semibold tracking-tight">{value}</p>
                     <p className="mt-1 text-sm text-slate-500">{label}</p>
                   </div>
@@ -160,6 +173,7 @@ export default function ExpatDeFiLandingPage() {
                       Analyse prioritaire
                     </div>
                   </div>
+
                   <div className="mt-6 space-y-4">
                     {[
                       "Résidence fiscale et calendrier de bascule",
@@ -183,6 +197,7 @@ export default function ExpatDeFiLandingPage() {
                       Une esthétique moderne, une expérience fluide et un discours rassurant, inspirés des meilleurs standards SaaS.
                     </p>
                   </div>
+
                   <div className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm">
                     <p className="text-sm text-slate-500">Promesse</p>
                     <p className="mt-2 text-xl font-semibold">Décider avec plus de clarté</p>
@@ -221,91 +236,6 @@ export default function ExpatDeFiLandingPage() {
           </div>
         </section>
 
-        <section id="simulator" className="border-y border-slate-200 bg-slate-50/80">
-          <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
-            <div>
-              <p className="text-sm font-medium text-indigo-700">Simulateur</p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-                Un mini outil pour qualifier votre situation en quelques minutes.
-              </h2>
-              <p className="mt-4 text-lg leading-8 text-slate-600">
-                Cette section donne un aperçu premium du type d'expérience que l'on peut proposer avant un rendez-vous : profil, pays cible, horizon de départ, sensibilité patrimoniale et exposition aux actifs numériques.
-              </p>
-              <div className="mt-8 rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm">
-                <p className="text-sm font-medium text-slate-500">Restitution attendue</p>
-                <ul className="mt-4 space-y-3 text-sm text-slate-600">
-                  <li>• Niveau de complexité de votre projet</li>
-                  <li>• Points de vigilance prioritaires</li>
-                  <li>• Interlocuteurs à mobiliser</li>
-                  <li>• Pertinence d'un accompagnement approfondi</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="rounded-[32px] border border-slate-200 bg-white p-6 shadow-[0_20px_80px_rgba(15,23,42,0.06)] sm:p-8">
-              <div className="grid gap-5 md:grid-cols-2">
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-slate-700">Votre profil</label>
-                  <select className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none">
-                    <option>Cadre salarié</option>
-                    <option>Entrepreneur</option>
-                    <option>Indépendant</option>
-                    <option>Famille internationale</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-slate-700">Pays cible</label>
-                  <input className="w-full rounded-2xl border border-slate-300 px-4 py-3 text-sm outline-none" placeholder="Ex. Portugal, UAE, Suisse" />
-                </div>
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-slate-700">Horizon de départ</label>
-                  <select className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none">
-                    <option>0 à 3 mois</option>
-                    <option>3 à 12 mois</option>
-                    <option>12 mois et plus</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-slate-700">Exposition crypto / DeFi</label>
-                  <select className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none">
-                    <option>Aucune</option>
-                    <option>Débutant</option>
-                    <option>Intermédiaire</option>
-                    <option>Avancé</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="mt-5">
-                <label className="mb-2 block text-sm font-medium text-slate-700">Vos enjeux principaux</label>
-                <textarea
-                  className="min-h-[130px] w-full rounded-[24px] border border-slate-300 px-4 py-3 text-sm outline-none"
-                  placeholder="Fiscalité, transfert de résidence, conservation des actifs, structure patrimoniale, protection familiale, etc."
-                />
-              </div>
-
-              <div className="mt-6 rounded-[24px] bg-slate-50 p-5">
-                <div className="flex items-center justify-between gap-3">
-                  <div>
-                    <p className="text-sm font-medium text-slate-800">Score indicatif de complexité</p>
-                    <p className="mt-1 text-sm text-slate-500">Aperçu UX, non calculé ici côté front</p>
-                  </div>
-                  <div className="rounded-full bg-amber-100 px-4 py-2 text-sm font-semibold text-amber-800">
-                    Élevé
-                  </div>
-                </div>
-                <div className="mt-4 h-3 rounded-full bg-slate-200">
-                  <div className="h-3 w-3/4 rounded-full bg-slate-900" />
-                </div>
-              </div>
-
-              <button className="mt-6 w-full rounded-full bg-slate-900 px-6 py-3 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:shadow-lg">
-                Recevoir une première lecture
-              </button>
-            </div>
-          </div>
-        </section>
-
         <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[1fr_1fr]">
             <div>
@@ -317,6 +247,7 @@ export default function ExpatDeFiLandingPage() {
                 Le site met l'accent sur la pédagogie, la structuration, l'analyse de scénarios et la coordination d'experts, plutôt que sur la vente directe de produits ou de promesses de rendement.
               </p>
             </div>
+
             <div className="grid gap-5">
               {pillars.map((item) => (
                 <div key={item.title} className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm">
@@ -379,6 +310,7 @@ export default function ExpatDeFiLandingPage() {
                   Positionnement premium, ton rassurant, expérience claire et architecture prête à être déployée sur Vercel.
                 </p>
               </div>
+
               <div className="flex flex-col gap-3">
                 <input
                   type="text"
