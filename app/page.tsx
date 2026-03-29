@@ -13,7 +13,7 @@ export default function ExpatDeFiLandingPage() {
       tag: "Finance décentralisée",
     },
     {
-      title: "Cadre fiscal & conformité",
+      title: "Cadre fiscal international & conformité",
       description:
         "Vision d'ensemble sur la traçabilité, les obligations déclaratives et l'articulation avec les experts réglementés.",
       tag: "Clarté & sécurité",
