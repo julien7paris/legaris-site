@@ -181,7 +181,7 @@ export default function ExpatDeFiLandingPage() {
                       "Résidence fiscale et calendrier de bascule",
                       "Comptes, flux internationaux et conservation des actifs",
                       "Lecture des usages crypto et des risques de custody",
-                      "Mise en relation avec fiscalistes, avocats ou experts-comptables si nécessaire",
+                      "Mise en relation avec fiscalistes, avocats ou experts-comptables",
                     ].map((item) => (
                       <div key={item} className="flex items-start gap-3 rounded-2xl bg-slate-50 p-4">
                         <div className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-indigo-600" />
