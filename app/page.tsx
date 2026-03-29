@@ -181,11 +181,11 @@ export default function ExpatDeFiLandingPage() {
                       "Résidence fiscale et calendrier de bascule",
                       "Comptes, flux internationaux et conservation des actifs",
                       "Lecture des usages crypto et des risques de custody",
-                      "Coordination avec fiscaliste, avocat ou expert-comptable si nécessaire",
+                      "Mise en relation avec fiscalistes, avocats ou experts-comptables si nécessaire",
                     ].map((item) => (
                       <div key={item} className="flex items-start gap-3 rounded-2xl bg-slate-50 p-4">
-                        <div className="mt-1 h-2.5 w-2.5 rounded-full bg-indigo-600" />
-                        <p className="text-sm text-slate-700">{item}</p>
+                        <div className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-indigo-600" />
+                        <p className="text-sm leading-6 text-slate-700">{item}</p>
                       </div>
                     ))}
                   </div>
@@ -275,7 +275,7 @@ export default function ExpatDeFiLandingPage() {
                 <Link
                   key={item.step}
                   href="/methode"
-                  className="block rounded-[28px] border border-slate-200 bg-slate-50 p-7 transition hover:-translate-y-1 hover:border-slate-300 hover:bg-white hover:shadow-xl"
+                  className="rounded-[28px] border border-slate-200 bg-slate-50 p-7 transition hover:-translate-y-1 hover:border-slate-300 hover:bg-white hover:shadow-xl"
                 >
                   <div className="text-sm font-semibold text-indigo-700">{item.step}</div>
                   <h3 className="mt-4 text-2xl font-semibold tracking-tight">{item.title}</h3>
