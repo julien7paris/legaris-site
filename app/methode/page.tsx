@@ -63,9 +63,9 @@ export default function MethodePage() {
               H
             </div>
             <div>
-              <p className="text-sm font-semibold tracking-tight">Legaris Advisory</p>
+              <p className="text-sm font-semibold tracking-tight">Legaris Patrimoine</p>
               <p className="text-xs text-slate-500">
-                Expatriation • Patrimoine • DeFi
+                Expatriation • Allocation d'Actifs • Transmission Entreprise • DeFi Crypto
               </p>
             </div>
           </a>

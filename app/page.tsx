@@ -82,11 +82,11 @@ export default function ExpatDeFiLandingPage() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           <a href="#top" className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-900 text-sm font-semibold text-white shadow-sm">
-              H
+              LP
             </div>
             <div>
-              <p className="text-sm font-semibold tracking-tight">Legaris Advisory</p>
-              <p className="text-xs text-slate-500">Expatriation • Patrimoine • DeFi</p>
+              <p className="text-sm font-semibold tracking-tight">Legaris Patrimoine</p>
+              <p className="text-xs text-slate-500">Expatriation • Allocation d'Actifs • Transmission Entreprise • DeFi Crypto</p>
             </div>
           </a>
 
@@ -194,7 +194,7 @@ export default function ExpatDeFiLandingPage() {
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div className="rounded-[28px] border border-slate-200 bg-slate-950 p-6 text-white shadow-sm">
                     <p className="text-sm text-slate-300">Positionnement</p>
-                    <p className="mt-2 text-xl font-semibold">Fintech premium</p>
+                    <p className="mt-2 text-xl font-semibold">Fintech Premium</p>
                     <p className="mt-3 text-sm leading-6 text-slate-300">
                       Une esthétique moderne, une expérience fluide et un discours rassurant, inspirés des meilleurs standards SaaS.
                     </p>
@@ -339,10 +339,10 @@ export default function ExpatDeFiLandingPage() {
 
       <footer className="border-t border-slate-200 bg-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between lg:px-8">
-          <p>© 2026 Legaris Advisory. Tous droits réservés.</p>
+          <p>© 2026 Legaris Patrimoine. Tous droits réservés.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-slate-800">Mentions légales</a>
-            <a href="#" className="hover:text-slate-800">Confidentialité</a>
+            <Link href="/a-propos" className="hover:text-slate-800">À propos</Link>
             <a href="#" className="hover:text-slate-800">Contact</a>
           </div>
         </div>
