@@ -120,7 +120,7 @@ export default function ExpatDeFiLandingPage() {
           <div className="relative mx-auto grid max-w-7xl gap-16 px-6 pb-16 pt-8 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:pb-20 lg:pt-10">
             <div className="flex flex-col justify-center">
               <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-slate-700 shadow-sm">
-                Conseil premium pour profils internationaux et entrepreneurs mobiles
+                Décidez mieux, optimisez plus, évitez les erreurs coûteuses
               </div>
 
               <h1 className="max-w-3xl text-5xl font-semibold tracking-tight text-slate-950 sm:text-6xl">
