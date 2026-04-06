@@ -128,7 +128,7 @@ export default function ExpatDeFiLandingPage() {
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-                Nous aidons les profils exigeants à structurer leurs décisions internationales, à clarifier leurs flux, à comprendre les usages de la finance décentralisée et à agir avec méthode.
+                Nous aidons les profils exigeants à structurer leurs décisions en France et à l'International, à clarifier leurs flux, à comprendre les usages de la finance décentralisée et à agir avec méthode.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">

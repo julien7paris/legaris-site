@@ -48,7 +48,7 @@ export default function AProposPage() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           <Link href="/" className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-900 text-white">
-              LP
+              P
             </div>
             <div>
               <p className="text-sm font-semibold">Proxfi</p>
