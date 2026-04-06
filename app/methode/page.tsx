@@ -63,7 +63,7 @@ export default function MethodePage() {
               H
             </div>
             <div>
-              <p className="text-sm font-semibold tracking-tight">Legaris Patrimoine</p>
+              <p className="text-sm font-semibold tracking-tight">Proxfi</p>
               <p className="text-xs text-slate-500">
                 Expatriation • Allocation d'Actifs • Transmission Entreprise • DeFi Crypto
               </p>

@@ -82,10 +82,10 @@ export default function ExpatDeFiLandingPage() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           <a href="#top" className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-900 text-sm font-semibold text-white shadow-sm">
-              LP
+              P
             </div>
             <div>
-              <p className="text-sm font-semibold tracking-tight">Legaris Patrimoine</p>
+              <p className="text-sm font-semibold tracking-tight">Proxfi</p>
               <p className="text-xs text-slate-500">Expatriation • Allocation d'Actifs • Transmission Entreprise • DeFi Crypto</p>
             </div>
           </a>
@@ -339,7 +339,7 @@ export default function ExpatDeFiLandingPage() {
 
       <footer className="border-t border-slate-200 bg-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between lg:px-8">
-          <p>© 2026 Legaris Patrimoine. Tous droits réservés.</p>
+          <p>© 2026 Proxfi. Tous droits réservés.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-slate-800">Mentions légales</a>
             <Link href="/a-propos" className="hover:text-slate-800">À propos</Link>

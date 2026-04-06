@@ -615,7 +615,7 @@ export default function SimulateurPage() {
               H
             </div>
             <div>
-              <p className="text-sm font-semibold tracking-tight">Legaris Patrimoine</p>
+              <p className="text-sm font-semibold tracking-tight">Proxfi</p>
               <p className="text-xs text-slate-500">Simulateur stratégique</p>
             </div>
           </a>

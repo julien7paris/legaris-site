@@ -51,7 +51,7 @@ export default function AProposPage() {
               LP
             </div>
             <div>
-              <p className="text-sm font-semibold">Legaris Patrimoine</p>
+              <p className="text-sm font-semibold">Proxfi</p>
               <p className="text-xs text-slate-500">Expatriation • Allocation d'Actifs • Transmission Entreprise • DeFi Crypto</p>
             </div>
           </Link>
@@ -97,7 +97,7 @@ export default function AProposPage() {
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-                Legaris Patrimoine est né d&apos;une conviction simple : les sujets patrimoniaux
+                Proxfi est né d&apos;une conviction simple : les sujets patrimoniaux
                 internationaux méritent une lecture plus claire, plus structurée et plus
                 rassurante, à la hauteur des enjeux réels de clients exigeants.
               </p>
@@ -141,7 +141,7 @@ export default function AProposPage() {
                     </h2>
 
                     <p className="mt-4 max-w-2xl text-slate-800">
-                      Legaris Patrimoine privilégie une logique de cadrage, de compréhension et de structuration.
+                      Proxfi privilégie une logique de cadrage, de compréhension et de structuration.
                       L&apos;approche repose sur la pédagogie, la vision d&apos;ensemble et la coordination
                       des expertises nécessaires lorsque la situation le requiert.
                     </p>
@@ -204,7 +204,7 @@ export default function AProposPage() {
                 commerciale.
               </p>
               <p>
-                Legaris Patrimoine propose une lecture plus stratégique : comprendre les
+                Proxfi propose une lecture plus stratégique : comprendre les
                 conséquences d&apos;un choix de pays, l&apos;impact d&apos;un calendrier, les enjeux de
                 résidence fiscale, les questions de conservation, les flux, la traçabilité
                 et la cohérence d&apos;ensemble.
@@ -303,7 +303,7 @@ export default function AProposPage() {
 
             <div className="space-y-6 text-base leading-8 text-slate-600">
               <p>
-                Legaris Patrimoine s&apos;inscrit dans une démarche exigeante, nourrie par un
+                Proxfi s&apos;inscrit dans une démarche exigeante, nourrie par un
                 parcours ancré dans l&apos;analyse, la structuration et la compréhension de
                 sujets techniques complexes.
               </p>
@@ -372,7 +372,7 @@ export default function AProposPage() {
 
       <footer className="border-t border-slate-200 bg-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between lg:px-8">
-          <p>© 2026 Legaris Patrimoine. Tous droits réservés.</p>
+          <p>© 2026 Proxfi. Tous droits réservés.</p>
           <div className="flex gap-6">
             <Link href="/mentions-legales" className="hover:text-slate-800">
               Mentions légales
