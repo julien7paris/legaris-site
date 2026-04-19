@@ -86,7 +86,9 @@ export default function ExpatDeFiLandingPage() {
             </div>
             <div>
               <p className="text-sm font-semibold tracking-tight">Proxfi</p>
-              <p className="text-xs text-slate-500">Expatriation • Allocation d'Actifs • Transmission Entreprise • DeFi Crypto</p>
+              <p className="text-xs text-slate-500">
+                Expatriation • Allocation d'Actifs • Transmission Entreprise • DeFi Crypto
+              </p>
             </div>
           </a>
 
@@ -230,8 +232,13 @@ export default function ExpatDeFiLandingPage() {
                 <div className="mb-5 inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">
                   {service.tag}
                 </div>
+
                 <h3 className="text-xl font-semibold tracking-tight">{service.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-slate-600">{service.description}</p>
+
+                <p className="mt-3 max-w-[32ch] whitespace-pre-line text-sm leading-7 text-slate-600">
+                  {service.description}
+                </p>
+
                 <div className="mt-6 text-sm font-medium text-indigo-700">Découvrir</div>
               </div>
             ))}
@@ -341,9 +348,15 @@ export default function ExpatDeFiLandingPage() {
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between lg:px-8">
           <p>© 2026 Proxfi. Tous droits réservés.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-slate-800">Mentions légales</a>
-            <Link href="/a-propos" className="hover:text-slate-800">À propos</Link>
-            <a href="#" className="hover:text-slate-800">Contact</a>
+            <a href="#" className="hover:text-slate-800">
+              Mentions légales
+            </a>
+            <Link href="/a-propos" className="hover:text-slate-800">
+              À propos
+            </Link>
+            <a href="#" className="hover:text-slate-800">
+              Contact
+            </a>
           </div>
         </div>
       </footer>
