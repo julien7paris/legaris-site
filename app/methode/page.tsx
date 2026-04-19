@@ -56,33 +56,38 @@ export default function MethodePage() {
   return (
     <div className="min-h-screen bg-white text-slate-900">
       {/* HEADER */}
-      <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/85 backdrop-blur">
+      <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           <a href="/" className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-900 text-white font-semibold">
+            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#08122E] text-sm font-semibold text-white shadow-sm ring-1 ring-[#F4D000]/20">
               P
             </div>
             <div>
-              <p className="text-sm font-semibold tracking-tight">Proxfi</p>
+              <p className="text-sm font-semibold tracking-tight text-[#08122E]">
+                Proxfi
+              </p>
               <p className="text-xs text-slate-500">
-                Expatriation • Allocation d'Actifs • Transmission Entreprise • DeFi Crypto
+                Expatriation • Allocation d&apos;Actifs • Transmission Entreprise • DeFi Crypto
               </p>
             </div>
           </a>
 
           <nav className="hidden items-center gap-8 md:flex">
-            <a href="/" className="text-sm text-slate-600 hover:text-slate-950">
+            <a
+              href="/"
+              className="text-sm text-slate-600 transition hover:text-[#0F5DB8]"
+            >
               Accueil
             </a>
             <a
               href="/simulateur"
-              className="text-sm text-slate-600 hover:text-slate-950"
+              className="text-sm text-slate-600 transition hover:text-[#0F5DB8]"
             >
               Simulateur
             </a>
             <a
               href="/methode"
-              className="text-sm text-slate-900 font-medium"
+              className="text-sm font-medium text-[#08122E]"
             >
               Méthode
             </a>
@@ -90,7 +95,7 @@ export default function MethodePage() {
 
           <a
             href="/#contact"
-            className="rounded-full bg-slate-900 px-5 py-2.5 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:shadow-lg"
+            className="rounded-full bg-[#08122E] px-5 py-2.5 text-sm font-medium text-white shadow-[0_10px_30px_rgba(8,18,46,0.18)] transition hover:-translate-y-0.5 hover:bg-[#0F5DB8]"
           >
             Réserver un échange
           </a>
@@ -99,12 +104,17 @@ export default function MethodePage() {
 
       {/* HERO */}
       <main>
-        <section className="border-b border-slate-100 bg-[linear-gradient(to_bottom,white,rgba(248,250,252,0.7))]">
-          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-            <div className="max-w-3xl">
-              <p className="text-sm font-medium text-indigo-700">Méthode</p>
+        <section className="relative overflow-hidden border-b border-slate-100 bg-[linear-gradient(to_bottom,#ffffff,#f8fbff)]">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(15,93,184,0.14),transparent_32%),radial-gradient(circle_at_78%_18%,rgba(95,174,123,0.12),transparent_24%),radial-gradient(circle_at_50%_100%,rgba(244,208,0,0.12),transparent_26%)]" />
 
-              <h1 className="mt-3 text-5xl font-semibold tracking-tight text-slate-950 sm:text-6xl">
+          <div className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8">
+            <div className="max-w-3xl">
+              <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#0F5DB8]/15 bg-white px-3 py-1 text-sm text-[#0F5DB8] shadow-sm">
+                <span className="h-2 w-2 rounded-full bg-[#F4D000]" />
+                Méthode
+              </div>
+
+              <h1 className="mt-6 text-5xl font-semibold tracking-tight text-[#08122E] sm:text-6xl">
                 Une méthode conçue pour transformer la complexité en décisions lisibles.
               </h1>
 
@@ -123,13 +133,13 @@ export default function MethodePage() {
             {steps.map((item) => (
               <div
                 key={item.step}
-                className="rounded-[30px] border border-slate-200 bg-slate-50 p-7 shadow-sm"
+                className="group rounded-[28px] border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-[#5FAE7B]/30 hover:shadow-xl"
               >
-                <div className="text-sm font-semibold text-indigo-700">
+                <div className="text-sm font-semibold text-[#0F5DB8]">
                   {item.step}
                 </div>
 
-                <h3 className="mt-4 text-2xl font-semibold tracking-tight">
+                <h3 className="mt-4 text-2xl font-semibold tracking-tight text-[#08122E]">
                   {item.title}
                 </h3>
 
@@ -139,8 +149,8 @@ export default function MethodePage() {
 
                 <div className="mt-6 space-y-4">
                   {item.details.map((detail) => (
-                    <div key={detail} className="flex items-start gap-4">
-                      <div className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-indigo-600" />
+                    <div key={detail} className="flex items-start gap-4 rounded-2xl bg-slate-50 p-4">
+                      <div className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[#0F5DB8]" />
                       <p className="text-sm leading-7 text-slate-700">
                         {detail}
                       </p>
@@ -153,15 +163,15 @@ export default function MethodePage() {
         </section>
 
         {/* PRINCIPES */}
-        <section className="border-y border-slate-200 bg-white">
+        <section className="border-y border-slate-200 bg-[#FCFDFE]">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
             <div className="grid gap-10 lg:grid-cols-[1fr_1fr]">
               <div>
-                <p className="text-sm font-medium text-indigo-700">
+                <p className="text-sm font-medium text-[#0F5DB8]">
                   Philosophie
                 </p>
 
-                <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
+                <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#08122E] sm:text-4xl">
                   Une approche premium, structurée et orientée décision.
                 </h2>
 
@@ -179,7 +189,9 @@ export default function MethodePage() {
                     key={item.title}
                     className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm"
                   >
-                    <h3 className="text-lg font-semibold">{item.title}</h3>
+                    <h3 className="text-lg font-semibold text-[#08122E]">
+                      {item.title}
+                    </h3>
                     <p className="mt-2 text-sm leading-6 text-slate-600">
                       {item.text}
                     </p>
@@ -192,11 +204,13 @@ export default function MethodePage() {
 
         {/* CTA */}
         <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-          <div className="rounded-[36px] bg-slate-950 px-8 py-12 text-white sm:px-12 sm:py-14">
-            <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+          <div className="relative overflow-hidden rounded-[36px] bg-[#08122E] px-8 py-12 text-white sm:px-12 sm:py-14">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(15,93,184,0.28),transparent_28%),radial-gradient(circle_at_80%_20%,rgba(95,174,123,0.18),transparent_24%),radial-gradient(circle_at_50%_100%,rgba(244,208,0,0.12),transparent_26%)]" />
+
+            <div className="relative grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
               <div>
-                <p className="text-sm font-medium text-indigo-300">
-                  Passer à l'étape suivante
+                <p className="text-sm font-medium text-[#B8D7FF]">
+                  Passer à l&apos;étape suivante
                 </p>
 
                 <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -212,14 +226,14 @@ export default function MethodePage() {
               <div className="flex flex-col gap-3">
                 <a
                   href="/simulateur"
-                  className="rounded-full border border-white/15 bg-white/10 px-6 py-3 text-center text-sm font-medium text-white transition hover:bg-white/15"
+                  className="rounded-full border border-white/10 bg-white/10 px-6 py-3 text-center text-sm font-medium text-white transition hover:bg-white/15"
                 >
                   Tester le simulateur
                 </a>
 
                 <a
                   href="/#contact"
-                  className="rounded-full bg-white px-6 py-3 text-center text-sm font-medium text-slate-950 transition hover:-translate-y-0.5 hover:shadow-lg"
+                  className="rounded-full bg-[#F4D000] px-6 py-3 text-center text-sm font-medium text-[#08122E] transition hover:-translate-y-0.5 hover:bg-[#E5C300] hover:shadow-lg"
                 >
                   Réserver un échange
                 </a>

@@ -483,25 +483,25 @@ export default function SimulateurPage() {
     score = Math.min(score, 100);
 
     let level = "Essentiel";
-    let badgeClass = "bg-emerald-100 text-emerald-800";
-    let progressClass = "bg-emerald-500";
+    let badgeClass = "bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200";
+    let progressClass = "bg-[#5FAE7B]";
     let glowClass =
-      "shadow-[0_0_0_1px_rgba(16,185,129,0.12),0_12px_40px_rgba(16,185,129,0.12)]";
+      "shadow-[0_0_0_1px_rgba(95,174,123,0.10),0_16px_48px_rgba(95,174,123,0.14)]";
 
     if (score >= 35 && score < 65) {
       level = "Optimisé";
-      badgeClass = "bg-sky-100 text-sky-800";
-      progressClass = "bg-sky-500";
+      badgeClass = "bg-[#EAF3FF] text-[#0F5DB8] ring-1 ring-[#B8D7FF]";
+      progressClass = "bg-[#0F5DB8]";
       glowClass =
-        "shadow-[0_0_0_1px_rgba(14,165,233,0.12),0_12px_40px_rgba(14,165,233,0.14)]";
+        "shadow-[0_0_0_1px_rgba(15,93,184,0.10),0_16px_48px_rgba(15,93,184,0.14)]";
     }
 
     if (score >= 65) {
       level = "Premium";
-      badgeClass = "bg-violet-100 text-violet-800";
-      progressClass = "bg-violet-600";
+      badgeClass = "bg-[#FFF8D9] text-[#7A6200] ring-1 ring-[#F4D000]/40";
+      progressClass = "bg-[linear-gradient(90deg,#0F5DB8_0%,#5FAE7B_55%,#F4D000_100%)]";
       glowClass =
-        "shadow-[0_0_0_1px_rgba(139,92,246,0.12),0_12px_40px_rgba(139,92,246,0.14)]";
+        "shadow-[0_0_0_1px_rgba(244,208,0,0.14),0_18px_52px_rgba(15,93,184,0.14)]";
     }
 
     const uniqueExperts = [...new Set(experts)];
@@ -607,18 +607,18 @@ export default function SimulateurPage() {
       <header className="border-b border-slate-200/80 bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           <a href="/" className="flex items-center gap-3 transition hover:opacity-90">
-            <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-900 text-sm font-semibold text-white shadow-sm">
+            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#08122E] text-sm font-semibold text-white shadow-sm ring-1 ring-[#F4D000]/20">
               P
             </div>
             <div>
-              <p className="text-sm font-semibold tracking-tight">Proxfi</p>
+              <p className="text-sm font-semibold tracking-tight text-[#08122E]">Proxfi</p>
               <p className="text-xs text-slate-500">Simulateur stratégique</p>
             </div>
           </a>
 
           <a
             href="/"
-            className="rounded-full border border-slate-300 bg-white px-5 py-2.5 text-sm font-medium text-slate-700 transition duration-200 hover:-translate-y-0.5 hover:border-slate-400 hover:bg-slate-50"
+            className="rounded-full border border-slate-300 bg-white px-5 py-2.5 text-sm font-medium text-slate-700 transition duration-200 hover:-translate-y-0.5 hover:border-[#5FAE7B]/40 hover:bg-[#F8FBFF]"
           >
             Retour au site
           </a>
@@ -626,14 +626,17 @@ export default function SimulateurPage() {
       </header>
 
       <main>
-        <section className="border-b border-slate-100 bg-[linear-gradient(to_bottom,white,rgba(248,250,252,0.72))]">
-          <div className="mx-auto grid max-w-7xl gap-8 px-6 py-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-8">
+        <section className="relative overflow-hidden border-b border-slate-100 bg-[linear-gradient(to_bottom,#ffffff,#f8fbff)]">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(15,93,184,0.14),transparent_32%),radial-gradient(circle_at_78%_18%,rgba(95,174,123,0.12),transparent_24%),radial-gradient(circle_at_50%_100%,rgba(244,208,0,0.10),transparent_26%)]" />
+
+          <div className="relative mx-auto grid max-w-7xl gap-8 px-6 py-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-8">
             <div className="max-w-3xl">
-              <p className="inline-flex rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-slate-700 shadow-sm">
+              <p className="inline-flex items-center gap-2 rounded-full border border-[#0F5DB8]/15 bg-white px-3 py-1 text-sm text-[#0F5DB8] shadow-sm">
+                <span className="h-2 w-2 rounded-full bg-[#F4D000]" />
                 Diagnostic premium • Qualification rapide
               </p>
 
-              <h1 className="mt-4 text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
+              <h1 className="mt-4 text-4xl font-semibold tracking-tight text-[#08122E] sm:text-5xl">
                 Évaluez le niveau d’accompagnement recommandé pour votre projet d’expatriation patrimoniale.
               </h1>
 
@@ -645,7 +648,7 @@ export default function SimulateurPage() {
                 <button
                   type="button"
                   onClick={scrollToForm}
-                  className="rounded-full bg-slate-900 px-5 py-3 text-sm font-medium text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+                  className="rounded-full bg-[#0F5DB8] px-5 py-3 text-sm font-medium text-white shadow-[0_12px_30px_rgba(15,93,184,0.28)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#0C4E9B]"
                 >
                   Commencer le diagnostic
                 </button>
@@ -667,7 +670,7 @@ export default function SimulateurPage() {
                 >
                   <source src="/family-international.mp4" type="video/mp4" />
                 </video>
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/15 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#08122E]/30 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/20 bg-white/15 p-3 text-white backdrop-blur-md">
                   <p className="text-xs font-medium uppercase tracking-[0.18em] text-white/80">
                     Vision internationale
@@ -689,15 +692,15 @@ export default function SimulateurPage() {
           >
             <div className="mb-8 flex items-start justify-between gap-4">
               <div>
-                <p className="text-sm font-medium text-indigo-700">📩 Formulaire email</p>
-                <h2 className="mt-2 text-2xl font-semibold tracking-tight">
+                <p className="text-sm font-medium text-[#0F5DB8]">📩 Formulaire email</p>
+                <h2 className="mt-2 text-2xl font-semibold tracking-tight text-[#08122E]">
                   Recevoir une première lecture
                 </h2>
               </div>
 
-              <div className="hidden rounded-2xl bg-slate-50 px-4 py-3 text-right sm:block">
+              <div className="hidden rounded-2xl bg-[#F8FBFF] px-4 py-3 text-right sm:block">
                 <p className="text-xs uppercase tracking-[0.18em] text-slate-400">Progression</p>
-                <p className="mt-1 text-lg font-semibold text-slate-900">{completionCount}/4</p>
+                <p className="mt-1 text-lg font-semibold text-[#08122E]">{completionCount}/4</p>
               </div>
             </div>
 
@@ -709,7 +712,7 @@ export default function SimulateurPage() {
                   onChange={(e) => setName(e.target.value)}
                   type="text"
                   placeholder="Nom prénom"
-                  className="w-full rounded-2xl border border-slate-300 px-4 py-3 text-sm outline-none transition duration-200 placeholder:text-slate-400 focus:border-slate-900 focus:ring-4 focus:ring-slate-200"
+                  className="w-full rounded-2xl border border-slate-300 px-4 py-3 text-sm outline-none transition duration-200 placeholder:text-slate-400 focus:border-[#0F5DB8] focus:ring-4 focus:ring-[#B8D7FF]/40"
                 />
               </div>
 
@@ -720,7 +723,7 @@ export default function SimulateurPage() {
                   onChange={(e) => setEmail(e.target.value)}
                   type="email"
                   placeholder="vous@email.com"
-                  className="w-full rounded-2xl border border-slate-300 px-4 py-3 text-sm outline-none transition duration-200 placeholder:text-slate-400 focus:border-slate-900 focus:ring-4 focus:ring-slate-200"
+                  className="w-full rounded-2xl border border-slate-300 px-4 py-3 text-sm outline-none transition duration-200 placeholder:text-slate-400 focus:border-[#0F5DB8] focus:ring-4 focus:ring-[#B8D7FF]/40"
                 />
               </div>
 
@@ -729,7 +732,7 @@ export default function SimulateurPage() {
                 <select
                   value={profile}
                   onChange={(e) => setProfile(e.target.value as Profile)}
-                  className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition duration-200 focus:border-slate-900 focus:ring-4 focus:ring-slate-200"
+                  className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition duration-200 focus:border-[#0F5DB8] focus:ring-4 focus:ring-[#B8D7FF]/40"
                 >
                   <option>Cadre salarié</option>
                   <option>Entrepreneur</option>
@@ -743,7 +746,7 @@ export default function SimulateurPage() {
                 <select
                   value={country}
                   onChange={(e) => setCountry(e.target.value)}
-                  className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition duration-200 focus:border-slate-900 focus:ring-4 focus:ring-slate-200"
+                  className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition duration-200 focus:border-[#0F5DB8] focus:ring-4 focus:ring-[#B8D7FF]/40"
                 >
                   <option value="">Sélectionnez un pays</option>
                   {countries.map((item) => (
@@ -759,7 +762,7 @@ export default function SimulateurPage() {
                 <select
                   value={horizon}
                   onChange={(e) => setHorizon(e.target.value as DepartureHorizon)}
-                  className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition duration-200 focus:border-slate-900 focus:ring-4 focus:ring-slate-200"
+                  className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition duration-200 focus:border-[#0F5DB8] focus:ring-4 focus:ring-[#B8D7FF]/40"
                 >
                   <option>0 à 3 mois</option>
                   <option>3 à 12 mois</option>
@@ -772,7 +775,7 @@ export default function SimulateurPage() {
                 <select
                   value={crypto}
                   onChange={(e) => setCrypto(e.target.value as CryptoLevel)}
-                  className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition duration-200 focus:border-slate-900 focus:ring-4 focus:ring-slate-200"
+                  className="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition duration-200 focus:border-[#0F5DB8] focus:ring-4 focus:ring-[#B8D7FF]/40"
                 >
                   <option>Aucune</option>
                   <option>Débutant</option>
@@ -807,9 +810,14 @@ export default function SimulateurPage() {
               ].map((item) => (
                 <label
                   key={item.label}
-                  className="flex cursor-pointer items-center gap-3 rounded-2xl border border-slate-200 p-4 text-sm text-slate-700 transition duration-200 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-slate-50"
+                  className="flex cursor-pointer items-center gap-3 rounded-2xl border border-slate-200 p-4 text-sm text-slate-700 transition duration-200 hover:-translate-y-0.5 hover:border-[#5FAE7B]/30 hover:bg-[#F8FBFF]"
                 >
-                  <input type="checkbox" checked={item.checked} onChange={item.onChange} />
+                  <input
+                    type="checkbox"
+                    checked={item.checked}
+                    onChange={item.onChange}
+                    className="accent-[#0F5DB8]"
+                  />
                   {item.label}
                 </label>
               ))}
@@ -822,20 +830,20 @@ export default function SimulateurPage() {
               <textarea
                 value={objectives}
                 onChange={(e) => setObjectives(e.target.value)}
-                className="min-h-[140px] w-full rounded-[24px] border border-slate-300 px-4 py-3 text-sm outline-none transition duration-200 placeholder:text-slate-400 focus:border-slate-900 focus:ring-4 focus:ring-slate-200"
+                className="min-h-[140px] w-full rounded-[24px] border border-slate-300 px-4 py-3 text-sm outline-none transition duration-200 placeholder:text-slate-400 focus:border-[#0F5DB8] focus:ring-4 focus:ring-[#B8D7FF]/40"
                 placeholder="Fiscalité, transfert de résidence, structure patrimoniale, succession, crypto, société, protection familiale, etc."
               />
             </div>
 
             <button
               type="submit"
-              className="mt-6 w-full rounded-full bg-slate-900 px-6 py-3 text-sm font-medium text-white transition duration-200 hover:-translate-y-0.5 hover:shadow-lg active:scale-[0.99]"
+              className="mt-6 w-full rounded-full bg-[#0F5DB8] px-6 py-3 text-sm font-medium text-white shadow-[0_12px_30px_rgba(15,93,184,0.22)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#0C4E9B] hover:shadow-lg active:scale-[0.99]"
             >
               Recevoir une première lecture
             </button>
 
             {submitted && (
-              <div className="mt-4 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-800">
+              <div className="mt-4 rounded-2xl border border-[#5FAE7B]/30 bg-[#ECF8F1] p-4 text-sm text-[#2E7A52]">
                 Merci {name || "beaucoup"} — votre demande a bien été prise en compte.
               </div>
             )}
@@ -847,8 +855,8 @@ export default function SimulateurPage() {
             >
               <div className="flex items-center justify-between gap-3">
                 <div>
-                  <p className="text-sm font-medium text-indigo-700">📊 Lecture stratégique</p>
-                  <h2 className="mt-2 text-2xl font-semibold tracking-tight">
+                  <p className="text-sm font-medium text-[#0F5DB8]">📊 Lecture stratégique</p>
+                  <h2 className="mt-2 text-2xl font-semibold tracking-tight text-[#08122E]">
                     Niveau d’accompagnement recommandé : {animatedScore}/100
                   </h2>
                 </div>
@@ -868,30 +876,30 @@ export default function SimulateurPage() {
               </div>
 
               <div className="mt-4 grid gap-3 sm:grid-cols-3">
-                <div className="rounded-2xl bg-slate-50 p-4 transition duration-200 hover:bg-slate-100">
+                <div className="rounded-2xl bg-[#F8FBFF] p-4 transition duration-200 hover:bg-[#EEF6FF]">
                   <p className="text-xs uppercase tracking-[0.18em] text-slate-400">Profil</p>
-                  <p className="mt-2 text-sm font-medium text-slate-900">{profile}</p>
+                  <p className="mt-2 text-sm font-medium text-[#08122E]">{profile}</p>
                 </div>
-                <div className="rounded-2xl bg-slate-50 p-4 transition duration-200 hover:bg-slate-100">
+                <div className="rounded-2xl bg-[#F8FBFF] p-4 transition duration-200 hover:bg-[#EEF6FF]">
                   <p className="text-xs uppercase tracking-[0.18em] text-slate-400">Pays</p>
-                  <p className="mt-2 text-sm font-medium text-slate-900">
+                  <p className="mt-2 text-sm font-medium text-[#08122E]">
                     {country || "Non sélectionné"}
                   </p>
                 </div>
-                <div className="rounded-2xl bg-slate-50 p-4 transition duration-200 hover:bg-slate-100">
+                <div className="rounded-2xl bg-[#F8FBFF] p-4 transition duration-200 hover:bg-[#EEF6FF]">
                   <p className="text-xs uppercase tracking-[0.18em] text-slate-400">Horizon</p>
-                  <p className="mt-2 text-sm font-medium text-slate-900">{horizon}</p>
+                  <p className="mt-2 text-sm font-medium text-[#08122E]">{horizon}</p>
                 </div>
               </div>
 
-              <div className="mt-4 rounded-2xl border border-slate-200 bg-slate-50 p-4">
+              <div className="mt-4 rounded-2xl border border-slate-200 bg-[#FCFDFE] p-4">
                 <p className="text-xs uppercase tracking-[0.18em] text-slate-400">Lecture pays</p>
-                <p className="mt-2 text-sm font-medium text-slate-900">{result.countryText}</p>
+                <p className="mt-2 text-sm font-medium text-[#08122E]">{result.countryText}</p>
               </div>
 
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                <div className="rounded-2xl bg-slate-50 p-5 transition duration-200 hover:-translate-y-0.5 hover:bg-slate-100">
-                  <p className="text-sm font-medium text-slate-800">Points d’attention stratégiques</p>
+                <div className="rounded-2xl bg-[#F8FBFF] p-5 transition duration-200 hover:-translate-y-0.5 hover:bg-[#EEF6FF]">
+                  <p className="text-sm font-medium text-[#08122E]">Points d’attention stratégiques</p>
                   <ul className="mt-3 space-y-2 text-sm text-slate-600">
                     {result.alerts.length > 0 ? (
                       result.alerts.map((item) => <li key={item}>• {item}</li>)
@@ -901,8 +909,8 @@ export default function SimulateurPage() {
                   </ul>
                 </div>
 
-                <div className="rounded-2xl bg-slate-50 p-5 transition duration-200 hover:-translate-y-0.5 hover:bg-slate-100">
-                  <p className="text-sm font-medium text-slate-800">Interlocuteurs à mobiliser</p>
+                <div className="rounded-2xl bg-[#F8FBFF] p-5 transition duration-200 hover:-translate-y-0.5 hover:bg-[#EEF6FF]">
+                  <p className="text-sm font-medium text-[#08122E]">Interlocuteurs à mobiliser</p>
                   <ul className="mt-3 space-y-2 text-sm text-slate-600">
                     {result.experts.map((item) => (
                       <li key={item}>• {item}</li>
@@ -912,12 +920,13 @@ export default function SimulateurPage() {
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-[32px] border border-slate-200 bg-slate-950 p-6 text-white shadow-sm transition duration-300 hover:shadow-xl sm:p-8">
-              <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-indigo-500/20 blur-3xl" />
-              <div className="absolute -bottom-20 left-0 h-40 w-40 rounded-full bg-cyan-400/10 blur-3xl" />
+            <div className="relative overflow-hidden rounded-[32px] border border-slate-200 bg-[#08122E] p-6 text-white shadow-sm transition duration-300 hover:shadow-xl sm:p-8">
+              <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[#0F5DB8]/25 blur-3xl" />
+              <div className="absolute -bottom-20 left-0 h-40 w-40 rounded-full bg-[#5FAE7B]/20 blur-3xl" />
+              <div className="absolute right-20 top-20 h-24 w-24 rounded-full bg-[#F4D000]/10 blur-2xl" />
 
               <div className="relative">
-                <p className="text-sm font-medium text-indigo-300">🤖 Agent IA conseiller</p>
+                <p className="text-sm font-medium text-[#B8D7FF]">🤖 Agent IA conseiller</p>
                 <h3 className="mt-2 text-2xl font-semibold tracking-tight">
                   Première lecture personnalisée
                 </h3>
@@ -939,14 +948,14 @@ export default function SimulateurPage() {
         <div className="mx-auto flex max-w-md items-center justify-between rounded-full border border-slate-200 bg-white/95 px-4 py-3 shadow-2xl backdrop-blur-md">
           <div>
             <p className="text-xs uppercase tracking-[0.18em] text-slate-400">Lecture actuelle</p>
-            <p className="text-sm font-semibold text-slate-900">
+            <p className="text-sm font-semibold text-[#08122E]">
               {animatedScore}/100 • {result.level}
             </p>
           </div>
           <button
             type="button"
             onClick={scrollToForm}
-            className="rounded-full bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-800"
+            className="rounded-full bg-[#0F5DB8] px-4 py-2 text-sm font-medium text-white transition hover:bg-[#0C4E9B]"
           >
             Continuer
           </button>

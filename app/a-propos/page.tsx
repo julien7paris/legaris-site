@@ -44,31 +44,33 @@ export default function AProposPage() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
-      <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/85 backdrop-blur">
+      <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           <Link href="/" className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-900 text-white">
+            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#08122E] text-white shadow-sm ring-1 ring-[#F4D000]/20">
               P
             </div>
             <div>
-              <p className="text-sm font-semibold">Proxfi</p>
-              <p className="text-xs text-slate-500">Expatriation • Allocation d'Actifs • Transmission Entreprise • DeFi Crypto</p>
+              <p className="text-sm font-semibold tracking-tight text-[#08122E]">Proxfi</p>
+              <p className="text-xs text-slate-500">
+                Expatriation • Allocation d&apos;Actifs • Transmission Entreprise • DeFi Crypto
+              </p>
             </div>
           </Link>
 
           <nav className="hidden items-center gap-8 md:flex">
-            <Link href="/" className="text-sm text-slate-600 transition hover:text-slate-950">
+            <Link href="/" className="text-sm text-slate-600 transition hover:text-[#0F5DB8]">
               Accueil
             </Link>
             <Link
               href="/simulateur"
-              className="text-sm text-slate-600 transition hover:text-slate-950"
+              className="text-sm text-slate-600 transition hover:text-[#0F5DB8]"
             >
               Simulateur
             </Link>
             <Link
               href="/a-propos"
-              className="text-sm font-medium text-slate-950"
+              className="text-sm font-medium text-[#08122E]"
             >
               À propos
             </Link>
@@ -76,7 +78,7 @@ export default function AProposPage() {
 
           <a
             href="#contact"
-            className="rounded-full bg-slate-900 px-5 py-2.5 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:shadow-lg"
+            className="rounded-full bg-[#08122E] px-5 py-2.5 text-sm font-medium text-white shadow-[0_10px_30px_rgba(8,18,46,0.18)] transition hover:-translate-y-0.5 hover:bg-[#0F5DB8]"
           >
             Réserver un échange
           </a>
@@ -84,15 +86,17 @@ export default function AProposPage() {
       </header>
 
       <main>
-        <section className="relative overflow-hidden border-b border-slate-100 bg-[linear-gradient(to_bottom,white,rgba(248,250,252,0.7))]">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(99,102,241,0.12),transparent_32%),radial-gradient(circle_at_80%_20%,rgba(14,165,233,0.10),transparent_22%),radial-gradient(circle_at_50%_100%,rgba(15,23,42,0.05),transparent_28%)]" />
+        <section className="relative overflow-hidden border-b border-slate-100 bg-[linear-gradient(to_bottom,#ffffff,#f8fbff)]">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(15,93,184,0.14),transparent_32%),radial-gradient(circle_at_78%_18%,rgba(95,174,123,0.12),transparent_24%),radial-gradient(circle_at_50%_100%,rgba(244,208,0,0.12),transparent_26%)]" />
+
           <div className="relative mx-auto grid max-w-7xl gap-16 px-6 pb-16 pt-10 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:pb-20 lg:pt-14">
             <div className="flex flex-col justify-center">
-              <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-slate-700 shadow-sm">
+              <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-[#0F5DB8]/15 bg-white px-3 py-1 text-sm text-[#0F5DB8] shadow-sm">
+                <span className="h-2 w-2 rounded-full bg-[#F4D000]" />
                 Une approche stratégique, pédagogique et premium
               </div>
 
-              <h1 className="max-w-3xl text-5xl font-semibold tracking-tight text-slate-950 sm:text-6xl">
+              <h1 className="max-w-3xl text-5xl font-semibold tracking-tight text-[#08122E] sm:text-6xl">
                 Une autre manière d&apos;aborder l&apos;expatriation, le patrimoine et les nouveaux usages financiers.
               </h1>
 
@@ -110,13 +114,13 @@ export default function AProposPage() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
                   href="#contact"
-                  className="rounded-full bg-indigo-600 px-6 py-3 text-center text-sm font-medium text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
+                  className="rounded-full bg-[#0F5DB8] px-6 py-3 text-center text-sm font-medium text-white shadow-[0_12px_30px_rgba(15,93,184,0.28)] transition hover:-translate-y-0.5 hover:bg-[#0C4E9B]"
                 >
                   Échanger sur votre situation
                 </a>
                 <Link
                   href="/simulateur"
-                  className="rounded-full border border-slate-300 bg-white px-6 py-3 text-center text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:bg-slate-50"
+                  className="rounded-full border border-slate-300 bg-white px-6 py-3 text-center text-sm font-medium text-slate-700 transition hover:border-[#5FAE7B]/40 hover:bg-[#F8FBFF]"
                 >
                   Tester le simulateur
                 </Link>
@@ -130,17 +134,18 @@ export default function AProposPage() {
                     <img
                       src="/images/bg-finance.jpg"
                       alt=""
-                      className="h-full w-full object-cover opacity-50"
+                      className="h-full w-full object-cover opacity-40"
                     />
+                    <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.82),rgba(248,251,255,0.7))]" />
                   </div>
 
                   <div className="relative z-10">
-                    <p className="text-sm text-slate-700">Positionnement</p>
-                    <h2 className="mt-2 text-3xl font-semibold text-slate-900">
+                    <p className="text-sm text-slate-600">Positionnement</p>
+                    <h2 className="mt-2 text-3xl font-semibold text-[#08122E]">
                       Stratégie avant produit
                     </h2>
 
-                    <p className="mt-4 max-w-2xl text-slate-800">
+                    <p className="mt-4 max-w-2xl text-slate-700 leading-7">
                       Proxfi privilégie une logique de cadrage, de compréhension et de structuration.
                       L&apos;approche repose sur la pédagogie, la vision d&apos;ensemble et la coordination
                       des expertises nécessaires lorsque la situation le requiert.
@@ -155,9 +160,9 @@ export default function AProposPage() {
                       ].map((item) => (
                         <div
                           key={item}
-                          className="flex items-center gap-3 rounded-2xl bg-white/70 p-4 backdrop-blur"
+                          className="flex items-center gap-3 rounded-2xl border border-white/50 bg-white/75 p-4 backdrop-blur"
                         >
-                          <div className="h-2.5 w-2.5 rounded-full bg-indigo-600" />
+                          <div className="h-2.5 w-2.5 rounded-full bg-[#0F5DB8]" />
                           <p className="text-sm text-slate-800">{item}</p>
                         </div>
                       ))}
@@ -166,7 +171,8 @@ export default function AProposPage() {
                 </div>
 
                 <div className="grid gap-5 sm:grid-cols-2">
-                  <div className="rounded-[28px] border border-slate-200 bg-slate-950 p-6 text-white shadow-sm">
+                  <div className="rounded-[28px] border border-slate-200 bg-[#08122E] p-6 text-white shadow-sm">
+                    <div className="mb-4 h-1 w-16 rounded-full bg-[linear-gradient(90deg,#0F5DB8_0%,#5FAE7B_55%,#F4D000_100%)]" />
                     <p className="text-sm text-slate-300">Promesse</p>
                     <p className="mt-2 text-xl font-semibold">Décider avec plus de clarté</p>
                     <p className="mt-3 text-sm leading-6 text-slate-300">
@@ -175,8 +181,9 @@ export default function AProposPage() {
                   </div>
 
                   <div className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm">
+                    <div className="mb-4 h-1 w-16 rounded-full bg-[linear-gradient(90deg,#0F5DB8_0%,#5FAE7B_55%,#F4D000_100%)] opacity-80" />
                     <p className="text-sm text-slate-500">Style</p>
-                    <p className="mt-2 text-xl font-semibold">Lisible et haut de gamme</p>
+                    <p className="mt-2 text-xl font-semibold text-[#08122E]">Lisible et haut de gamme</p>
                     <p className="mt-3 text-sm leading-6 text-slate-600">
                       Un ton sobre, premium, structuré et orienté confiance.
                     </p>
@@ -190,8 +197,8 @@ export default function AProposPage() {
         <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
             <div>
-              <p className="text-sm font-medium text-indigo-700">La vision</p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
+              <p className="text-sm font-medium text-[#0F5DB8]">La vision</p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#08122E] sm:text-4xl">
                 Un cabinet pensé pour les trajectoires internationales et les enjeux patrimoniaux contemporains.
               </h2>
             </div>
@@ -221,8 +228,8 @@ export default function AProposPage() {
         <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[1fr_1fr]">
             <div>
-              <p className="text-sm font-medium text-indigo-700">Ce qui guide l&apos;approche</p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
+              <p className="text-sm font-medium text-[#0F5DB8]">Ce qui guide l&apos;approche</p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#08122E] sm:text-4xl">
                 Des principes simples, mais exigeants.
               </h2>
             </div>
@@ -233,7 +240,7 @@ export default function AProposPage() {
                   key={item.title}
                   className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm"
                 >
-                  <h3 className="text-lg font-semibold text-slate-950">{item.title}</h3>
+                  <h3 className="text-lg font-semibold text-[#08122E]">{item.title}</h3>
                   <p className="mt-2 text-sm leading-7 text-slate-600">{item.text}</p>
                 </div>
               ))}
@@ -241,12 +248,12 @@ export default function AProposPage() {
           </div>
         </section>
 
-        <section className="border-y border-slate-200 bg-slate-50/60">
+        <section className="border-y border-slate-200 bg-[#FCFDFE]">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
             <div className="grid gap-10 lg:grid-cols-[1fr_1fr]">
               <div>
-                <p className="text-sm font-medium text-indigo-700">Pour qui</p>
-                <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
+                <p className="text-sm font-medium text-[#0F5DB8]">Pour qui</p>
+                <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#08122E] sm:text-4xl">
                   Une offre conçue pour des profils qui ont besoin de hauteur de vue.
                 </h2>
                 <p className="mt-4 text-lg leading-8 text-slate-600">
@@ -261,7 +268,7 @@ export default function AProposPage() {
                     key={item}
                     className="flex items-start gap-3 rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm"
                   >
-                    <div className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-indigo-600" />
+                    <div className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[#0F5DB8]" />
                     <p className="text-sm leading-6 text-slate-700">{item}</p>
                   </div>
                 ))}
@@ -272,8 +279,8 @@ export default function AProposPage() {
 
         <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-sm font-medium text-indigo-700">La méthode</p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
+            <p className="text-sm font-medium text-[#0F5DB8]">La méthode</p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#08122E] sm:text-4xl">
               Une approche structurée, orientée décision.
             </h2>
           </div>
@@ -282,10 +289,10 @@ export default function AProposPage() {
             {method.map((item) => (
               <div
                 key={item.step}
-                className="rounded-[28px] border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                className="rounded-[28px] border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-[#5FAE7B]/30 hover:shadow-xl"
               >
-                <div className="text-sm font-semibold text-indigo-700">{item.step}</div>
-                <h3 className="mt-4 text-2xl font-semibold tracking-tight">{item.title}</h3>
+                <div className="text-sm font-semibold text-[#0F5DB8]">{item.step}</div>
+                <h3 className="mt-4 text-2xl font-semibold tracking-tight text-[#08122E]">{item.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-slate-600">{item.text}</p>
               </div>
             ))}
@@ -295,8 +302,8 @@ export default function AProposPage() {
         <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
             <div>
-              <p className="text-sm font-medium text-indigo-700">Fondatrice</p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
+              <p className="text-sm font-medium text-[#0F5DB8]">Fondatrice</p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#08122E] sm:text-4xl">
                 Une culture de l&apos;analyse, de la rigueur et de la compréhension des systèmes complexes.
               </h2>
             </div>
@@ -322,8 +329,8 @@ export default function AProposPage() {
 
         <section className="mx-auto max-w-7xl px-6 pb-20 lg:px-8">
           <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
-            <p className="text-sm font-medium text-indigo-700">Cadre</p>
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950 sm:text-3xl">
+            <p className="text-sm font-medium text-[#0F5DB8]">Cadre</p>
+            <h2 className="mt-3 text-2xl font-semibold tracking-tight text-[#08122E] sm:text-3xl">
               Une approche stratégique et pédagogique, dans un cadre clair.
             </h2>
             <p className="mt-4 text-base leading-8 text-slate-600">
@@ -337,10 +344,12 @@ export default function AProposPage() {
         </section>
 
         <section id="contact" className="mx-auto max-w-7xl px-6 pb-20 lg:px-8">
-          <div className="rounded-[36px] bg-slate-950 px-8 py-12 text-white sm:px-12 sm:py-14">
-            <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+          <div className="relative overflow-hidden rounded-[36px] bg-[#08122E] px-8 py-12 text-white sm:px-12 sm:py-14">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(15,93,184,0.28),transparent_28%),radial-gradient(circle_at_80%_20%,rgba(95,174,123,0.18),transparent_24%),radial-gradient(circle_at_50%_100%,rgba(244,208,0,0.12),transparent_26%)]" />
+
+            <div className="relative grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
               <div>
-                <p className="text-sm font-medium text-indigo-300">Parlons de votre projet</p>
+                <p className="text-sm font-medium text-[#B8D7FF]">Parlons de votre projet</p>
                 <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
                   Une première conversation pour cadrer vos enjeux et vos priorités.
                 </h2>
@@ -361,7 +370,7 @@ export default function AProposPage() {
                   placeholder="Votre e-mail"
                   className="w-full rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm text-white placeholder:text-slate-400 outline-none"
                 />
-                <button className="rounded-full bg-white px-6 py-3 text-sm font-medium text-slate-950 transition hover:-translate-y-0.5 hover:shadow-lg">
+                <button className="rounded-full bg-[#F4D000] px-6 py-3 text-sm font-medium text-[#08122E] transition hover:-translate-y-0.5 hover:bg-[#E5C300] hover:shadow-lg">
                   Être recontacté
                 </button>
               </div>
@@ -374,13 +383,13 @@ export default function AProposPage() {
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between lg:px-8">
           <p>© 2026 Proxfi. Tous droits réservés.</p>
           <div className="flex gap-6">
-            <Link href="/mentions-legales" className="hover:text-slate-800">
+            <Link href="/mentions-legales" className="hover:text-[#08122E]">
               Mentions légales
             </Link>
-            <Link href="/a-propos" className="hover:text-slate-800">
+            <Link href="/a-propos" className="hover:text-[#08122E]">
               À propos
             </Link>
-            <a href="#contact" className="hover:text-slate-800">
+            <a href="#contact" className="hover:text-[#08122E]">
               Contact
             </a>
           </div>
