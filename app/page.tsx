@@ -17,13 +17,13 @@ export default function ExpatDeFiLandingPage() {
     {
       title: "Transmission d'Entreprise",
       description:
-        "Vision d’ensemble sur la cession, la transmission, l’articulation entre patrimoine privé et professionnel, avec la coordination d'experts",
+        "Vision d’ensemble sur la cession, la transmission, l’articulation entre patrimoine privé et professionnel, avec la coordination d'experts.",
       tag: "Patrimoine Professionnel",
     },
     {
       title: "Lecture stratégique de la DeFi",
       description:
-        "Accompagnement pédagogique sur les stablecoins, flux et conservation sécurisée, risques opérationnels et usages pertinents des Cryptos.",
+        "Accompagnement pédagogique sur les stablecoins, flux et conservation sécurisée, risques opérationnels et usages pertinents des crypto-actifs.",
       tag: "Finance décentralisée",
     },
   ];
@@ -78,38 +78,40 @@ export default function ExpatDeFiLandingPage() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
-      <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/85 backdrop-blur">
+      <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           <a href="#top" className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-900 text-sm font-semibold text-white shadow-sm">
+            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#08122E] text-sm font-semibold text-white shadow-sm ring-1 ring-[#F4D000]/20">
               P
             </div>
             <div>
-              <p className="text-sm font-semibold tracking-tight">Proxfi</p>
+              <p className="text-sm font-semibold tracking-tight text-[#08122E]">
+                Proxfi
+              </p>
               <p className="text-xs text-slate-500">
-                Expatriation • Allocation d'Actifs • Transmission Entreprise • DeFi Crypto
+                Expatriation • Allocation d&apos;Actifs • Transmission Entreprise • DeFi Crypto
               </p>
             </div>
           </a>
 
           <nav className="hidden items-center gap-8 md:flex">
-            <a href="#services" className="text-sm text-slate-600 transition hover:text-slate-950">
+            <a href="#services" className="text-sm text-slate-600 transition hover:text-[#0F5DB8]">
               Services
             </a>
-            <a href="/simulateur" className="text-sm text-slate-600 transition hover:text-slate-950">
+            <a href="/simulateur" className="text-sm text-slate-600 transition hover:text-[#0F5DB8]">
               Simulateur
             </a>
-            <a href="#method" className="text-sm text-slate-600 transition hover:text-slate-950">
+            <a href="#method" className="text-sm text-slate-600 transition hover:text-[#0F5DB8]">
               Méthode
             </a>
-            <a href="#faq" className="text-sm text-slate-600 transition hover:text-slate-950">
+            <a href="#faq" className="text-sm text-slate-600 transition hover:text-[#0F5DB8]">
               FAQ
             </a>
           </nav>
 
           <a
             href="#contact"
-            className="rounded-full bg-slate-900 px-5 py-2.5 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:shadow-lg"
+            className="rounded-full bg-[#08122E] px-5 py-2.5 text-sm font-medium text-white shadow-[0_10px_30px_rgba(8,18,46,0.18)] transition hover:-translate-y-0.5 hover:bg-[#0F5DB8]"
           >
             Réserver un échange
           </a>
@@ -117,32 +119,35 @@ export default function ExpatDeFiLandingPage() {
       </header>
 
       <main id="top">
-        <section className="relative overflow-hidden border-b border-slate-100 bg-[linear-gradient(to_bottom,white,rgba(248,250,252,0.7))]">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(99,102,241,0.12),transparent_32%),radial-gradient(circle_at_80%_20%,rgba(14,165,233,0.10),transparent_22%),radial-gradient(circle_at_50%_100%,rgba(15,23,42,0.05),transparent_28%)]" />
-          <div className="relative mx-auto grid max-w-7xl gap-16 px-6 pb-16 pt-8 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:pb-20 lg:pt-10">
+        <section className="relative overflow-hidden border-b border-slate-100 bg-[linear-gradient(to_bottom,#ffffff,#f8fbff)]">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(15,93,184,0.14),transparent_32%),radial-gradient(circle_at_78%_18%,rgba(95,174,123,0.12),transparent_24%),radial-gradient(circle_at_50%_100%,rgba(244,208,0,0.12),transparent_26%)]" />
+
+          <div className="relative mx-auto grid max-w-7xl gap-16 px-6 pb-16 pt-8 lg:grid-cols-[1.08fr_0.92fr] lg:px-8 lg:pb-24 lg:pt-10">
             <div className="flex flex-col justify-center">
-              <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-slate-700 shadow-sm">
+              <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-[#0F5DB8]/15 bg-white px-3 py-1 text-sm text-[#0F5DB8] shadow-sm">
+                <span className="h-2 w-2 rounded-full bg-[#F4D000]" />
                 Décidez mieux, optimisez plus, évitez les erreurs coûteuses
               </div>
 
-              <h1 className="max-w-3xl text-5xl font-semibold tracking-tight text-slate-950 sm:text-6xl">
-                Une approche claire pour vos projets d'expatriation et vos enjeux patrimoniaux nouvelle génération.
+              <h1 className="max-w-3xl text-5xl font-semibold tracking-tight text-[#08122E] sm:text-6xl">
+                Une approche claire pour vos projets d&apos;expatriation et vos enjeux patrimoniaux nouvelle génération.
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-                Nous aidons les profils exigeants à structurer leurs décisions en France et à l'International, à clarifier leurs flux, à comprendre les usages de la finance décentralisée et à agir avec méthode.
+                Nous aidons les profils exigeants à structurer leurs décisions en France et à l&apos;international, à clarifier leurs flux, à comprendre les usages de la finance décentralisée et à agir avec méthode.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
                   href="#contact"
-                  className="rounded-full bg-indigo-600 px-6 py-3 text-center text-sm font-medium text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
+                  className="rounded-full bg-[#0F5DB8] px-6 py-3 text-center text-sm font-medium text-white shadow-[0_12px_30px_rgba(15,93,184,0.28)] transition hover:-translate-y-0.5 hover:bg-[#0C4E9B]"
                 >
                   Demander un diagnostic
                 </a>
+
                 <a
                   href="/simulateur"
-                  className="rounded-full border border-slate-300 bg-white px-6 py-3 text-center text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:bg-slate-50"
+                  className="rounded-full border border-slate-300 bg-white px-6 py-3 text-center text-sm font-medium text-slate-700 transition hover:border-[#5FAE7B]/40 hover:bg-[#F8FBFF]"
                 >
                   Tester le simulateur
                 </a>
@@ -158,7 +163,9 @@ export default function ExpatDeFiLandingPage() {
                     key={label}
                     className="rounded-[24px] border border-slate-200 bg-white p-4 shadow-sm"
                   >
-                    <p className="text-lg font-semibold tracking-tight">{value}</p>
+                    <p className="text-lg font-semibold tracking-tight text-[#08122E]">
+                      {value}
+                    </p>
                     <p className="mt-1 text-sm text-slate-500">{label}</p>
                   </div>
                 ))}
@@ -171,9 +178,12 @@ export default function ExpatDeFiLandingPage() {
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <p className="text-sm font-medium text-slate-500">Exemple de mission</p>
-                      <h3 className="mt-2 text-2xl font-semibold">Départ à Lisbonne ou Dubaï</h3>
+                      <h3 className="mt-2 text-2xl font-semibold text-[#08122E]">
+                        Départ à Lisbonne ou Dubaï
+                      </h3>
                     </div>
-                    <div className="rounded-full bg-emerald-50 px-3 py-1 text-sm font-medium text-emerald-700">
+
+                    <div className="rounded-full bg-[#5FAE7B]/18 px-3 py-1 text-sm font-medium text-[#2E7A52]">
                       Analyse prioritaire
                     </div>
                   </div>
@@ -186,7 +196,7 @@ export default function ExpatDeFiLandingPage() {
                       "Mise en relation avec fiscalistes, avocats ou experts-comptables",
                     ].map((item) => (
                       <div key={item} className="flex items-start gap-3 rounded-2xl bg-slate-50 p-4">
-                        <div className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-indigo-600" />
+                        <div className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[#0F5DB8]" />
                         <p className="text-sm leading-6 text-slate-700">{item}</p>
                       </div>
                     ))}
@@ -194,7 +204,8 @@ export default function ExpatDeFiLandingPage() {
                 </div>
 
                 <div className="grid gap-5 sm:grid-cols-2">
-                  <div className="rounded-[28px] border border-slate-200 bg-slate-950 p-6 text-white shadow-sm">
+                  <div className="rounded-[28px] border border-slate-200 bg-[#08122E] p-6 text-white shadow-sm">
+                    <div className="mb-4 h-1 w-16 rounded-full bg-[linear-gradient(90deg,#0F5DB8_0%,#5FAE7B_55%,#F4D000_100%)]" />
                     <p className="text-sm text-slate-300">Positionnement</p>
                     <p className="mt-2 text-xl font-semibold">Fintech Premium</p>
                     <p className="mt-3 text-sm leading-6 text-slate-300">
@@ -203,8 +214,11 @@ export default function ExpatDeFiLandingPage() {
                   </div>
 
                   <div className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm">
+                    <div className="mb-4 h-1 w-16 rounded-full bg-[linear-gradient(90deg,#0F5DB8_0%,#5FAE7B_55%,#F4D000_100%)] opacity-80" />
                     <p className="text-sm text-slate-500">Promesse</p>
-                    <p className="mt-2 text-xl font-semibold">Décider avec plus de clarté</p>
+                    <p className="mt-2 text-xl font-semibold text-[#08122E]">
+                      Décider avec plus de clarté
+                    </p>
                     <p className="mt-3 text-sm leading-6 text-slate-600">
                       Hiérarchiser les choix, réduire les angles morts et avancer avec une vraie feuille de route.
                     </p>
@@ -217,9 +231,9 @@ export default function ExpatDeFiLandingPage() {
 
         <section id="services" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-sm font-medium text-indigo-700">Offre</p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-              Une offre pensée pour l'expatriation, la structuration patrimoniale et la compréhension des nouveaux actifs.
+            <p className="text-sm font-medium text-[#0F5DB8]">Offre</p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#08122E] sm:text-4xl">
+              Une offre pensée pour l&apos;expatriation, la structuration patrimoniale et la compréhension des nouveaux actifs.
             </h2>
           </div>
 
@@ -227,19 +241,23 @@ export default function ExpatDeFiLandingPage() {
             {services.map((service) => (
               <div
                 key={service.title}
-                className="group rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                className="group rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-[#0F5DB8]/20 hover:shadow-xl"
               >
-                <div className="mb-5 inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">
+                <div className="mb-5 inline-flex rounded-full bg-[#0F5DB8]/8 px-3 py-1 text-xs font-medium text-[#0F5DB8]">
                   {service.tag}
                 </div>
 
-                <h3 className="text-xl font-semibold tracking-tight">{service.title}</h3>
+                <h3 className="text-xl font-semibold tracking-tight text-[#08122E]">
+                  {service.title}
+                </h3>
 
                 <p className="mt-3 max-w-[32ch] whitespace-pre-line text-sm leading-7 text-slate-600">
                   {service.description}
                 </p>
 
-                <div className="mt-6 text-sm font-medium text-indigo-700">Découvrir</div>
+                <div className="mt-6 text-sm font-medium text-[#0F5DB8] transition group-hover:text-[#0C4E9B]">
+                  Découvrir
+                </div>
               </div>
             ))}
           </div>
@@ -248,19 +266,24 @@ export default function ExpatDeFiLandingPage() {
         <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[1fr_1fr]">
             <div>
-              <p className="text-sm font-medium text-indigo-700">Positionnement légalement propre</p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
+              <p className="text-sm font-medium text-[#0F5DB8]">
+                Positionnement légalement propre
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#08122E] sm:text-4xl">
                 Un discours clair, rassurant et compatible avec un cadre de conseil stratégique.
               </h2>
               <p className="mt-4 text-lg leading-8 text-slate-600">
-                Le site met l'accent sur la pédagogie, la structuration, l'analyse de scénarios et la coordination d'experts, plutôt que sur la vente directe de produits ou de promesses de rendement.
+                Le site met l&apos;accent sur la pédagogie, la structuration, l&apos;analyse de scénarios et la coordination d&apos;experts, plutôt que sur la vente directe de produits ou de promesses de rendement.
               </p>
             </div>
 
             <div className="grid gap-5">
               {pillars.map((item) => (
-                <div key={item.title} className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm">
-                  <h3 className="text-lg font-semibold">{item.title}</h3>
+                <div
+                  key={item.title}
+                  className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm"
+                >
+                  <h3 className="text-lg font-semibold text-[#08122E]">{item.title}</h3>
                   <p className="mt-2 text-sm leading-6 text-slate-600">{item.text}</p>
                 </div>
               ))}
@@ -268,11 +291,11 @@ export default function ExpatDeFiLandingPage() {
           </div>
         </section>
 
-        <section id="method" className="border-y border-slate-200 bg-white">
+        <section id="method" className="border-y border-slate-200 bg-[#FCFDFE]">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
             <div className="max-w-2xl">
-              <p className="text-sm font-medium text-indigo-700">Méthode</p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
+              <p className="text-sm font-medium text-[#0F5DB8]">Méthode</p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#08122E] sm:text-4xl">
                 Une expérience inspirée des meilleurs standards SaaS premium.
               </h2>
             </div>
@@ -282,10 +305,12 @@ export default function ExpatDeFiLandingPage() {
                 <Link
                   key={item.step}
                   href="/methode"
-                  className="rounded-[28px] border border-slate-200 bg-slate-50 p-7 transition hover:-translate-y-1 hover:border-slate-300 hover:bg-white hover:shadow-xl"
+                  className="rounded-[28px] border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:border-[#5FAE7B]/30 hover:shadow-xl"
                 >
-                  <div className="text-sm font-semibold text-indigo-700">{item.step}</div>
-                  <h3 className="mt-4 text-2xl font-semibold tracking-tight">{item.title}</h3>
+                  <div className="text-sm font-semibold text-[#0F5DB8]">{item.step}</div>
+                  <h3 className="mt-4 text-2xl font-semibold tracking-tight text-[#08122E]">
+                    {item.title}
+                  </h3>
                   <p className="mt-3 text-sm leading-6 text-slate-600">{item.text}</p>
                 </Link>
               ))}
@@ -295,16 +320,19 @@ export default function ExpatDeFiLandingPage() {
 
         <section id="faq" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
           <div className="max-w-2xl">
-            <p className="text-sm font-medium text-indigo-700">FAQ</p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-              Les questions clés avant de lancer ce type d'offre.
+            <p className="text-sm font-medium text-[#0F5DB8]">FAQ</p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#08122E] sm:text-4xl">
+              Les questions clés avant de lancer ce type d&apos;offre.
             </h2>
           </div>
 
           <div className="mt-12 grid gap-5">
             {faqs.map((faq) => (
-              <div key={faq.q} className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm">
-                <h3 className="text-lg font-semibold">{faq.q}</h3>
+              <div
+                key={faq.q}
+                className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm"
+              >
+                <h3 className="text-lg font-semibold text-[#08122E]">{faq.q}</h3>
                 <p className="mt-3 text-sm leading-7 text-slate-600">{faq.a}</p>
               </div>
             ))}
@@ -312,10 +340,12 @@ export default function ExpatDeFiLandingPage() {
         </section>
 
         <section id="contact" className="mx-auto max-w-7xl px-6 pb-20 lg:px-8">
-          <div className="rounded-[36px] bg-slate-950 px-8 py-12 text-white sm:px-12 sm:py-14">
-            <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+          <div className="relative overflow-hidden rounded-[36px] bg-[#08122E] px-8 py-12 text-white sm:px-12 sm:py-14">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(15,93,184,0.28),transparent_28%),radial-gradient(circle_at_80%_20%,rgba(95,174,123,0.18),transparent_24%),radial-gradient(circle_at_50%_100%,rgba(244,208,0,0.12),transparent_26%)]" />
+
+            <div className="relative grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
               <div>
-                <p className="text-sm font-medium text-indigo-300">Parlons de votre projet</p>
+                <p className="text-sm font-medium text-[#B8D7FF]">Parlons de votre projet</p>
                 <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
                   Une première conversation pour cadrer vos enjeux et vos priorités.
                 </h2>
@@ -335,7 +365,7 @@ export default function ExpatDeFiLandingPage() {
                   placeholder="Votre e-mail"
                   className="w-full rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm text-white placeholder:text-slate-400 outline-none"
                 />
-                <button className="rounded-full bg-white px-6 py-3 text-sm font-medium text-slate-950 transition hover:-translate-y-0.5 hover:shadow-lg">
+                <button className="rounded-full bg-[#F4D000] px-6 py-3 text-sm font-medium text-[#08122E] transition hover:-translate-y-0.5 hover:bg-[#E5C300] hover:shadow-lg">
                   Être recontacté
                 </button>
               </div>
@@ -348,13 +378,13 @@ export default function ExpatDeFiLandingPage() {
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between lg:px-8">
           <p>© 2026 Proxfi. Tous droits réservés.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-slate-800">
+            <a href="#" className="hover:text-[#08122E]">
               Mentions légales
             </a>
-            <Link href="/a-propos" className="hover:text-slate-800">
+            <Link href="/a-propos" className="hover:text-[#08122E]">
               À propos
             </Link>
-            <a href="#" className="hover:text-slate-800">
+            <a href="#" className="hover:text-[#08122E]">
               Contact
             </a>
           </div>
