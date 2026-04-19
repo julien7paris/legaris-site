@@ -5,7 +5,7 @@ export default function ExpatDeFiLandingPage() {
     {
       title: "Stratégie d'Expatriation & Cadre Fiscal International",
       description:
-        "Optimisation de la résidence fiscale, structuration patrimoniale et sécurisation de chaque étape — de l’installation au retour.",
+        "Optimisation de la résidence fiscale, structuration patrimoniale et sécurisation de chaque étape —   de l’installation au retour.",
       tag: "Mobilité internationale",
     },
     {
