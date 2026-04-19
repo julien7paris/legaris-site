@@ -402,15 +402,12 @@ export default function SimulateurPage() {
     }
 
     if (crypto === "Débutant") {
-      score += 5;
       alerts.push("Présence d’actifs numériques : besoin de pédagogie et de structuration.");
     }
     if (crypto === "Intermédiaire") {
-      score += 11;
       alerts.push("Flux et traçabilité des actifs numériques à intégrer dans la vision d’ensemble.");
     }
     if (crypto === "Avancé") {
-      score += 18;
       alerts.push("Exposition avancée aux actifs numériques : conservation, flux et coordination à cadrer finement.");
     }
 
@@ -462,7 +459,6 @@ export default function SimulateurPage() {
       normalizedObjectives.includes("wallet") ||
       normalizedObjectives.includes("stablecoin")
     ) {
-      score += 6;
       alerts.push("Sujet crypto / DeFi explicitement mentionné.");
     }
 
@@ -493,7 +489,7 @@ export default function SimulateurPage() {
       "shadow-[0_0_0_1px_rgba(16,185,129,0.12),0_12px_40px_rgba(16,185,129,0.12)]";
 
     if (score >= 35 && score < 65) {
-      level = "Renforcé";
+      level = "Optimisé";
       badgeClass = "bg-sky-100 text-sky-800";
       progressClass = "bg-sky-500";
       glowClass =

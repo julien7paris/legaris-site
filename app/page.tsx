@@ -3,28 +3,28 @@ import Link from "next/link";
 export default function ExpatDeFiLandingPage() {
   const services = [
     {
-      title: "Stratégie d'expatriation premium",
+      title: "Stratégie d'Expatriation & Cadre Fiscal International",
       description:
-        "Choix du pays, calendrier de départ, résidence fiscale, structuration patrimoniale et coordination des étapes clés.",
+        "Choix du pays, résidence fiscale, retour d'expatriation, structuration patrimoniale et suivi des étapes clés.",
       tag: "Mobilité internationale",
+    },
+    {
+      title: "Pilotage Patrimonial en France et à l'International",
+      description:
+        "Tableaux de bord, scénarios, cartographie des actifs et aide à la décision pour profils mobiles et entrepreneurs.",
+      tag: "Allocation d'Actifs",
+    },
+    {
+      title: "Transmission d'Entreprise",
+      description:
+        "Vision d’ensemble sur la cession, la transmission, l’articulation entre patrimoine privé et professionnel, avec la coordination d'experts",
+      tag: "Patrimoine Professionnel",
     },
     {
       title: "Lecture stratégique de la DeFi",
       description:
-        "Accompagnement pédagogique sur stablecoins, conservation, flux, risques opérationnels et usages pertinents selon votre profil.",
+        "Accompagnement pédagogique sur les stablecoins, flux et conservation sécurisée, risques opérationnels et usages pertinents des Cryptos.",
       tag: "Finance décentralisée",
-    },
-    {
-      title: "Cadre fiscal international & conformité",
-      description:
-        "Vision d'ensemble sur la traçabilité, les obligations déclaratives et l'articulation avec les experts réglementés.",
-      tag: "Clarté & sécurité",
-    },
-    {
-      title: "Pilotage patrimonial international",
-      description:
-        "Tableaux de bord, scénarios, cartographie des actifs et aide à la décision pour profils mobiles et entrepreneurs.",
-      tag: "Suivi stratégique",
     },
   ];
 
