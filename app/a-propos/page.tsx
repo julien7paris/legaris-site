@@ -53,23 +53,38 @@ export default function AProposPage() {
 
   const journey = [
     {
-      period: "Aujourd’hui",
+      period: "2019-2026",
       title: "Responsable Performance Management",
       subtitle: "Coface",
       text: "Pilotage de la performance, data quality, reporting, incentives et accompagnement des équipes dans des environnements internationaux complexes.",
+      color: "bg-[#0F5DB8]",
+      badgeClass: "bg-[#EAF3FF] text-[#0F5DB8]",
     },
     {
       period: "Expérience précédente",
       title: "Management commercial & account management",
       subtitle: "Coface",
       text: "Suivi de portefeuille, fidélisation, analyse de résultats, pilotage d’indicateurs et accompagnement de la transformation commerciale.",
+      color: "bg-[#0F5DB8]",
+      badgeClass: "bg-[#EAF3FF] text-[#0F5DB8]",
     },
     {
       period: "Fondations",
       title: "Management, développement commercial & conduite du changement",
       subtitle: "Malakoff Humanis",
       text: "Animation d’équipes, croissance, structuration d’activité, coordination transverse et culture forte du résultat.",
+      color: "bg-[#5FAE7B]",
+      badgeClass: "bg-[#EAF8EF] text-[#3E8D5C]",
     },
+  ];
+
+  const expertiseCards = [
+    "Pilotage de la performance",
+    "Lecture stratégique du risque",
+    "Data & dashboards de décision",
+    "Environnements multi-pays",
+    "Structuration & coordination",
+    "Approche premium et pédagogique",
   ];
 
   return (
@@ -98,7 +113,7 @@ export default function AProposPage() {
             >
               Simulateur
             </Link>
-            <Link href="/a-propos" className="text-sm font-medium text-[#08122E]">
+            <Link href="/a-propos" className="text-sm font-medium text-[#0F5DB8]">
               À propos
             </Link>
           </nav>
@@ -113,107 +128,82 @@ export default function AProposPage() {
       </header>
 
       <main>
-        <section className="relative overflow-hidden border-b border-slate-100 bg-[linear-gradient(to_bottom,#ffffff,#f8fbff)]">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(15,93,184,0.14),transparent_32%),radial-gradient(circle_at_78%_18%,rgba(95,174,123,0.12),transparent_24%),radial-gradient(circle_at_50%_100%,rgba(244,208,0,0.12),transparent_26%)]" />
+        <section className="mx-auto max-w-7xl px-6 pt-10 lg:px-8 lg:pt-12">
+          <div className="overflow-hidden rounded-[36px] border border-slate-200 bg-[linear-gradient(90deg,#04143D_0%,#0F5DB8_55%,#62B67D_100%)] shadow-[0_24px_80px_rgba(15,23,42,0.10)]">
+            <div className="relative px-6 py-8 sm:px-8 lg:px-10 lg:py-10">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_20%,rgba(255,255,255,0.10),transparent_22%),radial-gradient(circle_at_100%_50%,rgba(255,255,255,0.07),transparent_30%)]" />
 
-          <div className="relative mx-auto grid max-w-7xl gap-16 px-6 pb-16 pt-10 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:pb-20 lg:pt-14">
-            <div className="flex flex-col justify-center">
-              <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-[#0F5DB8]/15 bg-white px-3 py-1 text-sm text-[#0F5DB8] shadow-sm">
-                <span className="h-2 w-2 rounded-full bg-[#F4D000]" />
-                Une approche stratégique, pédagogique et premium
-              </div>
-
-              <h1 className="max-w-3xl text-5xl font-semibold tracking-tight text-[#08122E] sm:text-6xl">
-                Une autre manière d&apos;aborder l&apos;expatriation, le patrimoine et les nouveaux usages financiers.
-              </h1>
-
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-                Proxfi est né d&apos;une conviction simple : les sujets patrimoniaux
-                internationaux méritent une lecture plus claire, plus structurée et plus
-                rassurante, à la hauteur des enjeux réels de clients exigeants.
-              </p>
-
-              <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600">
-                Ici, l&apos;objectif n&apos;est pas de pousser des produits, mais d&apos;aider à
-                comprendre, hiérarchiser, structurer et décider avec davantage de recul.
-              </p>
-
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href="#contact"
-                  className="rounded-full bg-[#0F5DB8] px-6 py-3 text-center text-sm font-medium text-white shadow-[0_12px_30px_rgba(15,93,184,0.28)] transition hover:-translate-y-0.5 hover:bg-[#0C4E9B]"
-                >
-                  Échanger sur votre situation
-                </a>
-                <Link
-                  href="/simulateur"
-                  className="rounded-full border border-slate-300 bg-white px-6 py-3 text-center text-sm font-medium text-slate-700 transition hover:border-[#5FAE7B]/40 hover:bg-[#F8FBFF]"
-                >
-                  Tester le simulateur
-                </Link>
-              </div>
-            </div>
-
-            <div className="flex items-center justify-center">
-              <div className="grid w-full max-w-xl gap-5">
-                <div className="relative overflow-hidden rounded-[32px] border border-slate-200 p-8 shadow-[0_20px_80px_rgba(15,23,42,0.08)]">
-                  <div className="absolute inset-0">
-                    <img
-                      src="/images/bg-finance.jpg"
-                      alt=""
-                      className="h-full w-full object-cover opacity-40"
-                    />
-                    <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.82),rgba(248,251,255,0.7))]" />
-                  </div>
-
-                  <div className="relative z-10">
-                    <p className="text-sm text-slate-600">Positionnement</p>
-                    <h2 className="mt-2 text-3xl font-semibold text-[#08122E]">
-                      Stratégie avant produit
-                    </h2>
-
-                    <p className="mt-4 max-w-2xl leading-7 text-slate-700">
-                      Proxfi privilégie une logique de cadrage, de compréhension et de structuration.
-                      L&apos;approche repose sur la pédagogie, la vision d&apos;ensemble et la coordination
-                      des expertises nécessaires lorsque la situation le requiert.
-                    </p>
-
-                    <div className="mt-8 grid gap-4">
-                      {[
-                        "Vision transfrontalière",
-                        "Approche premium et rassurante",
-                        "Lecture stratégique de la DeFi",
-                        "Coordination avec des experts réglementés",
-                      ].map((item) => (
-                        <div
-                          key={item}
-                          className="flex items-center gap-3 rounded-2xl border border-white/50 bg-white/75 p-4 backdrop-blur"
-                        >
-                          <div className="h-2.5 w-2.5 rounded-full bg-[#0F5DB8]" />
-                          <p className="text-sm text-slate-800">{item}</p>
-                        </div>
-                      ))}
+              <div className="relative grid gap-8 lg:grid-cols-[360px_1fr] xl:grid-cols-[420px_1fr]">
+                <div className="flex items-end">
+                  <div className="w-full overflow-hidden rounded-[28px] bg-[#18345E]/55 shadow-[0_20px_60px_rgba(2,12,27,0.22)] ring-1 ring-white/10">
+                    <div className="aspect-[4/4.7] w-full">
+                      <img
+                        src="/images/julien-lallemand.jpg"
+                        alt="Portrait de Julien LALLEMAND"
+                        className="h-full w-full object-cover"
+                      />
                     </div>
                   </div>
                 </div>
 
-                <div className="grid gap-5 sm:grid-cols-2">
-                  <div className="rounded-[28px] border border-slate-200 bg-[#08122E] p-6 text-white shadow-sm">
-                    <div className="mb-4 h-1 w-16 rounded-full bg-[linear-gradient(90deg,#0F5DB8_0%,#5FAE7B_55%,#F4D000_100%)]" />
-                    <p className="text-sm text-slate-300">Promesse</p>
-                    <p className="mt-2 text-xl font-semibold">Décider avec plus de clarté</p>
-                    <p className="mt-3 text-sm leading-6 text-slate-300">
-                      Réduire les angles morts, mieux comprendre les impacts et avancer avec méthode.
+                <div className="flex flex-col justify-between">
+                  <div>
+                    <div className="inline-flex w-fit items-center gap-2 rounded-full bg-[#18345E]/55 px-4 py-2 text-sm font-semibold tracking-[0.08em] text-[#FFD84D] ring-1 ring-white/10 backdrop-blur">
+                      <span className="text-base">●</span>
+                      FONDATEUR
+                    </div>
+
+                    <h1 className="mt-5 text-4xl font-semibold tracking-tight text-[#D9E8FF] sm:text-5xl lg:text-6xl">
+                      Julien LALLEMAND
+                    </h1>
+
+                    <div className="mt-4">
+                      <span className="inline-flex items-center gap-2 rounded-full bg-[#1E6ED3] px-4 py-2 text-sm font-medium text-white shadow-sm ring-1 ring-white/10">
+                        <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/15 text-xs">
+                          ✓
+                        </span>
+                        Profil vérifié
+                      </span>
+                    </div>
+
+                    <p className="mt-6 text-2xl font-medium tracking-tight text-white">
+                      Responsable Performance Management | Coface
                     </p>
+
+                    <p className="mt-3 text-lg text-[#DCE7F7]">
+                      Paris, Île-de-France, France
+                    </p>
+
+                    <div className="mt-8 flex flex-wrap gap-4">
+                      {["International", "Performance & Data", "Risk & Business", "Patrimoine Expat"].map(
+                        (item) => (
+                          <span
+                            key={item}
+                            className="rounded-full border border-white/20 bg-white/92 px-5 py-3 text-sm font-medium text-[#17345C] shadow-[0_6px_18px_rgba(8,18,46,0.10)]"
+                          >
+                            {item}
+                          </span>
+                        )
+                      )}
+                    </div>
                   </div>
 
-                  <div className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm">
-                    <div className="mb-4 h-1 w-16 rounded-full bg-[linear-gradient(90deg,#0F5DB8_0%,#5FAE7B_55%,#F4D000_100%)] opacity-80" />
-                    <p className="text-sm text-slate-500">Style</p>
-                    <p className="mt-2 text-xl font-semibold text-[#08122E]">Lisible et haut de gamme</p>
-                    <p className="mt-3 text-sm leading-6 text-slate-600">
-                      Un ton sobre, premium, structuré et orienté confiance.
-                    </p>
+                  <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:max-w-[520px]">
+                    <div className="rounded-[26px] border border-white/18 bg-white/96 p-6 shadow-[0_12px_35px_rgba(8,18,46,0.12)]">
+                      <p className="text-xs uppercase tracking-[0.22em] text-slate-500">Abonnés</p>
+                      <p className="mt-3 text-3xl font-semibold text-[#08122E]">1 250</p>
+                      <p className="mt-2 text-sm leading-6 text-slate-600">
+                        Présence et audience professionnelles
+                      </p>
+                    </div>
+
+                    <div className="rounded-[26px] border border-white/18 bg-white/96 p-6 shadow-[0_12px_35px_rgba(8,18,46,0.12)]">
+                      <p className="text-xs uppercase tracking-[0.22em] text-slate-500">Relations</p>
+                      <p className="mt-3 text-3xl font-semibold text-[#08122E]">500+</p>
+                      <p className="mt-2 text-sm leading-6 text-slate-600">
+                        Écosystème business et réseau
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -221,82 +211,119 @@ export default function AProposPage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-            <div>
-              <p className="text-sm font-medium text-[#0F5DB8]">La vision</p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#08122E] sm:text-4xl">
-                Un cabinet pensé pour les trajectoires internationales et les enjeux patrimoniaux contemporains.
-              </h2>
-            </div>
-
-            <div className="space-y-6 text-base leading-8 text-slate-600">
-              <p>
-                Les décisions liées à l&apos;expatriation, aux flux internationaux, à la
-                structuration patrimoniale et aux actifs digitaux ne peuvent pas être
-                traitées sérieusement avec des réponses génériques ou une logique purement
-                commerciale.
-              </p>
-              <p>
-                Proxfi propose une lecture plus stratégique : comprendre les
-                conséquences d&apos;un choix de pays, l&apos;impact d&apos;un calendrier, les enjeux de
-                résidence fiscale, les questions de conservation, les flux, la traçabilité
-                et la cohérence d&apos;ensemble.
-              </p>
-              <p>
-                L&apos;ambition est d&apos;offrir une expérience plus lisible, plus premium et plus
-                moderne, inspirée des meilleurs standards digitaux, tout en conservant la
-                profondeur nécessaire à des décisions patrimoniales sérieuses.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-[1fr_1fr]">
-            <div>
-              <p className="text-sm font-medium text-[#0F5DB8]">Ce qui guide l&apos;approche</p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#08122E] sm:text-4xl">
-                Des principes simples, mais exigeants.
-              </h2>
-            </div>
-
-            <div className="grid gap-5">
-              {values.map((item) => (
+        <section className="mx-auto max-w-7xl px-6 py-6 lg:px-8">
+          <div className="flex flex-wrap gap-4">
+            {["International", "Performance & Data", "Risk & Business", "Patrimoine Expat"].map(
+              (item) => (
                 <div
-                  key={item.title}
-                  className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm"
+                  key={item}
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-medium text-[#17345C] shadow-sm"
                 >
-                  <h3 className="text-lg font-semibold text-[#08122E]">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-7 text-slate-600">{item.text}</p>
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#0F5DB8]" />
+                  {item}
                 </div>
-              ))}
-            </div>
+              )
+            )}
           </div>
         </section>
 
-        <section className="border-y border-slate-200 bg-[#FCFDFE]">
-          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-            <div className="grid gap-10 lg:grid-cols-[1fr_1fr]">
-              <div>
-                <p className="text-sm font-medium text-[#0F5DB8]">Pour qui</p>
-                <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#08122E] sm:text-4xl">
-                  Une offre conçue pour des profils qui ont besoin de hauteur de vue.
-                </h2>
-                <p className="mt-4 text-lg leading-8 text-slate-600">
-                  Le service s&apos;adresse à celles et ceux qui cherchent une lecture plus
-                  structurée et plus sereine de leur situation patrimoniale internationale.
+        <section className="mx-auto max-w-7xl px-6 py-6 lg:px-8">
+          <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+            <div className="rounded-[28px] border border-slate-200 bg-white p-7 shadow-sm sm:p-8">
+              <p className="text-sm font-medium text-[#0F5DB8]">À propos</p>
+              <div className="mt-3 h-1 w-10 rounded-full bg-[#0F5DB8]" />
+
+              <h2 className="mt-6 max-w-3xl text-3xl font-semibold tracking-tight text-[#08122E] sm:text-4xl">
+                Une lecture stratégique de la performance, du risque et des trajectoires internationales.
+              </h2>
+
+              <div className="mt-6 space-y-5 text-base leading-8 text-slate-600">
+                <p>
+                  Professionnel du pilotage de la performance, Julien LALLEMAND évolue
+                  dans un environnement international exigeant, à l&apos;interface de la data,
+                  du business, du risque et de la décision.
+                </p>
+
+                <p>
+                  Son parcours chez Coface, acteur de référence de l&apos;assurance-crédit,
+                  lui a permis de développer une approche structurée des flux, des arbitrages,
+                  des indicateurs et de la coordination entre enjeux commerciaux, opérationnels
+                  et stratégiques.
+                </p>
+
+                <p>
+                  Cette culture de la rigueur, de la lisibilité et de la performance nourrit
+                  aujourd&apos;hui le positionnement de Proxfi : proposer une approche plus claire,
+                  plus exigeante et plus moderne de la gestion patrimoniale, en particulier
+                  pour les profils expatriés, internationaux, entrepreneurs ou exposés à des
+                  problématiques transfrontalières.
+                </p>
+
+                <p>
+                  L&apos;objectif est d&apos;apporter de la hauteur de vue : mieux comprendre les choix
+                  de pays, les calendriers, les arbitrages patrimoniaux, les flux, la structuration,
+                  la transmission et les nouveaux usages financiers.
                 </p>
               </div>
 
-              <div className="grid gap-4">
-                {audience.map((item) => (
-                  <div
-                    key={item}
-                    className="flex items-start gap-3 rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm"
-                  >
-                    <div className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[#0F5DB8]" />
-                    <p className="text-sm leading-6 text-slate-700">{item}</p>
+              <div className="mt-8 border-t border-slate-200 pt-8">
+                <h3 className="text-2xl font-semibold tracking-tight text-[#08122E]">
+                  Expertises clés
+                </h3>
+
+                <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                  {expertiseCards.map((item) => (
+                    <div
+                      key={item}
+                      className="flex items-center gap-3 rounded-[22px] border border-slate-200 bg-[#F8FBFF] px-4 py-4"
+                    >
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#EAF3FF] text-[#0F5DB8]">
+                        <span className="h-2.5 w-2.5 rounded-full bg-[#0F5DB8]" />
+                      </div>
+                      <p className="text-sm font-medium leading-6 text-slate-700">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-[28px] border border-slate-200 bg-white p-7 shadow-sm sm:p-8">
+              <p className="text-sm font-medium text-[#08122E]">Parcours</p>
+              <div className="mt-3 h-1 w-10 rounded-full bg-[#0F5DB8]" />
+
+              <div className="mt-8 space-y-8">
+                {journey.map((item, index) => (
+                  <div key={`${item.period}-${item.title}`} className="flex gap-4">
+                    <div className="flex flex-col items-center">
+                      <div className={`mt-1 h-4 w-4 rounded-full ${item.color}`} />
+                      {index < journey.length - 1 && (
+                        <div className="mt-2 h-full min-h-[120px] w-px bg-slate-200" />
+                      )}
+                    </div>
+
+                    <div className="pb-2">
+                      <span
+                        className={`inline-flex rounded-full px-3 py-1 text-xs font-semibold ${item.badgeClass}`}
+                      >
+                        {item.period}
+                      </span>
+
+                      <h3 className="mt-4 text-2xl font-semibold leading-tight tracking-tight text-[#08122E]">
+                        {item.title}
+                      </h3>
+
+                      <p
+                        className={`mt-2 text-lg font-semibold ${
+                          item.subtitle === "Malakoff Humanis"
+                            ? "text-[#3E8D5C]"
+                            : "text-[#0F5DB8]"
+                        }`}
+                      >
+                        {item.subtitle}
+                      </p>
+
+                      <p className="mt-4 text-base leading-8 text-slate-600">{item.text}</p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -304,304 +331,82 @@ export default function AProposPage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-sm font-medium text-[#0F5DB8]">La méthode</p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#08122E] sm:text-4xl">
-              Une approche structurée, orientée décision.
-            </h2>
-          </div>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {method.map((item) => (
-              <div
-                key={item.step}
-                className="rounded-[28px] border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-[#5FAE7B]/30 hover:shadow-xl"
-              >
-                <div className="text-sm font-semibold text-[#0F5DB8]">{item.step}</div>
-                <h3 className="mt-4 text-2xl font-semibold tracking-tight text-[#08122E]">{item.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-slate-600">{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-            <div>
-              <p className="text-sm font-medium text-[#0F5DB8]">Fondations</p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#08122E] sm:text-4xl">
-                Une culture de l&apos;analyse, de la rigueur et de la compréhension des systèmes complexes.
-              </h2>
-            </div>
-
-            <div className="space-y-6 text-base leading-8 text-slate-600">
-              <p>
-                Proxfi s&apos;inscrit dans une démarche exigeante, nourrie par un
-                parcours ancré dans l&apos;analyse, la structuration et la compréhension de
-                sujets techniques complexes.
-              </p>
-              <p>
-                Cette culture de rigueur se retrouve dans la manière d&apos;aborder les enjeux
-                patrimoniaux : poser les bonnes questions, clarifier les mécanismes,
-                hiérarchiser les risques et construire des décisions plus cohérentes.
-              </p>
-              <p>
-                L&apos;objectif n&apos;est pas de simplifier à outrance, mais de rendre lisible ce
-                qui est souvent dispersé, opaque ou mal expliqué.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-7xl px-6 pb-20 lg:px-8">
-          <div className="overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-[0_20px_80px_rgba(15,23,42,0.06)]">
-            <div className="h-28 bg-[linear-gradient(90deg,#08122E_0%,#0F5DB8_55%,#5FAE7B_100%)]" />
-
-            <div className="relative px-6 pb-8 sm:px-8 lg:px-10">
-              <div className="relative -mt-14 flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
-                <div className="flex flex-col gap-6 lg:flex-row lg:items-start">
-                  <div className="h-32 w-32 overflow-hidden rounded-[28px] border-4 border-white bg-slate-100 shadow-lg sm:h-36 sm:w-36">
-                    <img
-                      src="/images/julien-lallemand.jpg"
-                      alt="Portrait de Julien LALLEMAND"
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-
-                  <div className="pt-2">
-                    <div className="flex flex-wrap items-center gap-3">
-                      <h2 className="text-3xl font-semibold tracking-tight text-[#08122E] sm:text-4xl">
-                        Julien LALLEMAND
-                      </h2>
-                      <span className="inline-flex items-center gap-2 rounded-full bg-[#EAF3FF] px-3 py-1 text-xs font-medium text-[#0F5DB8] ring-1 ring-[#0F5DB8]/10">
-                        <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#0F5DB8] text-[10px] text-white">
-                          ✓
-                        </span>
-                        Profil vérifié
-                      </span>
-                    </div>
-
-                    <p className="mt-3 text-lg font-medium text-slate-700">
-                      Responsable Performance Management | Coface
-                    </p>
-
-                    <p className="mt-2 text-sm text-slate-500">
-                      Paris, Île-de-France, France
-                    </p>
-
-                    <div className="mt-5 flex flex-wrap gap-3">
-                      <span className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm">
-                        International
-                      </span>
-                      <span className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm">
-                        Performance & Data
-                      </span>
-                      <span className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm">
-                        Risk & Business
-                      </span>
-                      <span className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm">
-                        Patrimoine Expat
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="grid gap-3 sm:grid-cols-3 lg:min-w-[420px]">
-                  <div className="rounded-[24px] border border-slate-200 bg-[#F8FBFF] p-5">
-                    <p className="text-xs uppercase tracking-[0.18em] text-slate-500">Abonnés</p>
-                    <p className="mt-2 text-2xl font-semibold text-[#08122E]">1 250</p>
-                    <p className="mt-1 text-xs text-slate-500">Présence et audience professionnelles</p>
-                  </div>
-
-                  <div className="rounded-[24px] border border-slate-200 bg-[#FCFDFE] p-5">
-                    <p className="text-xs uppercase tracking-[0.18em] text-slate-500">Relations</p>
-                    <p className="mt-2 text-2xl font-semibold text-[#08122E]">500+</p>
-                    <p className="mt-1 text-xs text-slate-500">Écosystème business et réseau</p>
-                  </div>
-
-                  <div className="rounded-[24px] border border-slate-200 bg-white p-5">
-                    <p className="text-xs uppercase tracking-[0.18em] text-slate-500">Fonction</p>
-                    <p className="mt-2 text-2xl font-semibold text-[#08122E]">WE & NA</p>
-                    <p className="mt-1 text-xs text-slate-500">Vision régionale et multi-pays</p>
-                  </div>
-                </div>
+        <section className="mx-auto max-w-7xl px-6 py-6 lg:px-8">
+          <div className="rounded-[28px] border border-slate-200 bg-white p-7 shadow-sm sm:p-8">
+            <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
+              <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-[#EAF3FF] text-[#0F5DB8]">
+                <div className="h-9 w-9 rounded-[10px] border-2 border-current" />
               </div>
 
-              <div className="mt-10 grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
-                <div className="space-y-6">
-                  <div className="rounded-[28px] border border-slate-200 bg-white p-7 shadow-sm">
-                    <p className="text-sm font-medium text-[#0F5DB8]">Présentation</p>
-                    <h3 className="mt-3 text-2xl font-semibold tracking-tight text-[#08122E]">
-                      Une lecture stratégique de la performance, du risque et des trajectoires internationales.
-                    </h3>
-
-                    <div className="mt-5 space-y-4 text-sm leading-7 text-slate-600">
-                      <p>
-                        Professionnel du pilotage de la performance, Julien LALLEMAND évolue
-                        dans un environnement international exigeant, à l&apos;interface de la data,
-                        du business, du risque et de la décision.
-                      </p>
-
-                      <p>
-                        Son parcours chez Coface, acteur de référence de l&apos;assurance-crédit,
-                        lui a permis de développer une approche structurée des flux, des arbitrages,
-                        des indicateurs et de la coordination entre enjeux commerciaux, opérationnels
-                        et stratégiques.
-                      </p>
-
-                      <p>
-                        Cette culture de la rigueur, de la lisibilité et de la performance nourrit
-                        aujourd&apos;hui le positionnement de Proxfi : proposer une approche plus claire,
-                        plus exigeante et plus moderne de la gestion patrimoniale, en particulier
-                        pour les profils expatriés, internationaux, entrepreneurs ou exposés à des
-                        problématiques transfrontalières.
-                      </p>
-
-                      <p>
-                        L&apos;objectif est d&apos;apporter de la hauteur de vue : mieux comprendre les
-                        choix de pays, les calendriers, les arbitrages patrimoniaux, les flux,
-                        la structuration, la transmission et les nouveaux usages financiers.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="rounded-[28px] border border-slate-200 bg-[#FCFDFE] p-7 shadow-sm">
-                    <p className="text-sm font-medium text-[#0F5DB8]">Expertises clés</p>
-                    <div className="mt-5 flex flex-wrap gap-3">
-                      {highlights.map((item) => (
-                        <span
-                          key={item}
-                          className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm"
-                        >
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="rounded-[28px] border border-slate-200 bg-white p-7 shadow-sm">
-                    <p className="text-sm font-medium text-[#0F5DB8]">Cadre d’intervention</p>
-                    <p className="mt-4 text-sm leading-7 text-slate-600">
-                      Les contenus et échanges proposés sur le site relèvent d&apos;une démarche de
-                      conseil stratégique, pédagogique et de structuration. Les actes réglementés,
-                      recommandations personnalisées d&apos;investissement, consultations juridiques,
-                      actes fiscaux ou prestations réservées à des professions encadrées doivent
-                      être réalisés dans le cadre des statuts, agréments et partenariats adaptés.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="space-y-6">
-                  <div className="rounded-[28px] border border-slate-200 bg-[#08122E] p-7 text-white shadow-sm">
-                    <p className="text-sm font-medium text-[#B8D7FF]">Signature</p>
-                    <h3 className="mt-3 text-2xl font-semibold tracking-tight">
-                      Performance, structure, clarté.
-                    </h3>
-                    <p className="mt-4 text-sm leading-7 text-slate-300">
-                      Une approche inspirée des meilleurs standards du pilotage stratégique :
-                      rendre lisibles les situations complexes, hiérarchiser les risques et
-                      sécuriser la prise de décision.
-                    </p>
-                  </div>
-
-                  <div className="rounded-[28px] border border-slate-200 bg-white p-7 shadow-sm">
-                    <p className="text-sm font-medium text-[#0F5DB8]">Parcours</p>
-
-                    <div className="mt-6 space-y-6">
-                      {journey.map((item) => (
-                        <div key={item.title} className="flex gap-4">
-                          <div className="flex flex-col items-center">
-                            <div className="mt-1 h-3.5 w-3.5 rounded-full bg-[#0F5DB8]" />
-                            <div className="mt-2 h-full w-px bg-slate-200" />
-                          </div>
-
-                          <div className="pb-2">
-                            <p className="text-xs font-medium uppercase tracking-[0.18em] text-slate-400">
-                              {item.period}
-                            </p>
-                            <h4 className="mt-1 text-lg font-semibold text-[#08122E]">
-                              {item.title}
-                            </h4>
-                            <p className="mt-1 text-sm font-medium text-slate-500">{item.subtitle}</p>
-                            <p className="mt-3 text-sm leading-7 text-slate-600">{item.text}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="rounded-[28px] border border-slate-200 bg-[#F8FBFF] p-7 shadow-sm">
-                    <p className="text-sm font-medium text-[#0F5DB8]">Photo de profil</p>
-                    <p className="mt-3 text-sm leading-7 text-slate-600">
-                      Remplacez l&apos;image actuelle par votre photo HD dans le dossier :
-                    </p>
-                    <div className="mt-4 rounded-2xl border border-slate-200 bg-white px-4 py-3 font-mono text-sm text-[#08122E]">
-                      /public/images/julien-lallemand.jpg
-                    </div>
-                    <p className="mt-3 text-xs leading-6 text-slate-500">
-                      Formats conseillés : JPEG, PNG ou WebP. Idéalement un portrait vertical net,
-                      fond sobre, cadrage poitrine ou buste.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" className="mx-auto max-w-7xl px-6 pb-20 lg:px-8">
-          <div className="relative overflow-hidden rounded-[36px] bg-[#08122E] px-8 py-12 text-white sm:px-12 sm:py-14">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(15,93,184,0.28),transparent_28%),radial-gradient(circle_at_80%_20%,rgba(95,174,123,0.18),transparent_24%),radial-gradient(circle_at_50%_100%,rgba(244,208,0,0.12),transparent_26%)]" />
-
-            <div className="relative grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
               <div>
-                <p className="text-sm font-medium text-[#B8D7FF]">Parlons de votre projet</p>
-                <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
+                <h2 className="text-2xl font-semibold tracking-tight text-[#08122E]">
+                  Cadre d&apos;intervention
+                </h2>
+                <p className="mt-3 max-w-5xl text-base leading-8 text-slate-600">
+                  Les contenus et échanges proposés sur le site relèvent d&apos;une démarche de
+                  conseil stratégique, pédagogique et de structuration. Les actes réglementés,
+                  recommandations personnalisées d&apos;investissement, consultations juridiques,
+                  actes fiscaux ou prestations réservées à des professions encadrées doivent
+                  être réalisés dans le cadre des statuts, agréments et partenariats adaptés.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" className="mx-auto max-w-7xl px-6 pb-20 pt-6 lg:px-8">
+          <div className="relative overflow-hidden rounded-[32px] bg-[#08122E] px-8 py-10 text-white shadow-[0_20px_60px_rgba(8,18,46,0.16)] sm:px-10 sm:py-12">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(15,93,184,0.30),transparent_28%),radial-gradient(circle_at_80%_20%,rgba(95,174,123,0.18),transparent_22%),radial-gradient(circle_at_50%_100%,rgba(244,208,0,0.08),transparent_26%)]" />
+
+            <div className="relative grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+              <div>
+                <p className="text-sm font-medium text-[#2DA2FF]">Parlons de votre projet</p>
+                <h2 className="mt-4 max-w-2xl text-4xl font-semibold tracking-tight text-white">
                   Une première conversation pour cadrer vos enjeux et vos priorités.
                 </h2>
-                <p className="mt-4 max-w-2xl text-base leading-7 text-slate-300">
+                <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-300">
                   Une approche claire, premium et structurée pour mieux comprendre votre
                   situation et identifier les prochaines étapes utiles.
                 </p>
               </div>
 
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-4">
                 <input
                   type="text"
                   placeholder="Votre nom"
-                  className="w-full rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm text-white placeholder:text-slate-400 outline-none"
+                  className="w-full rounded-2xl border border-white/10 bg-white/8 px-5 py-4 text-sm text-white placeholder:text-slate-400 outline-none backdrop-blur"
                 />
                 <input
                   type="email"
                   placeholder="Votre e-mail"
-                  className="w-full rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm text-white placeholder:text-slate-400 outline-none"
+                  className="w-full rounded-2xl border border-white/10 bg-white/8 px-5 py-4 text-sm text-white placeholder:text-slate-400 outline-none backdrop-blur"
                 />
-                <button className="rounded-full bg-[#F4D000] px-6 py-3 text-sm font-medium text-[#08122E] transition hover:-translate-y-0.5 hover:bg-[#E5C300] hover:shadow-lg">
+                <button className="rounded-2xl bg-[#F0C532] px-6 py-4 text-sm font-semibold text-[#08122E] transition hover:-translate-y-0.5 hover:bg-[#E3BB2E]">
                   Être recontacté
                 </button>
               </div>
             </div>
           </div>
         </section>
-      </main>
 
-      <footer className="border-t border-slate-200 bg-white">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between lg:px-8">
-          <p>© 2026 Proxfi. Tous droits réservés.</p>
-          <div className="flex gap-6">
-            <Link href="/mentions-legales" className="hover:text-[#08122E]">
-              Mentions légales
-            </Link>
-            <Link href="/a-propos" className="hover:text-[#08122E]">
-              À propos
-            </Link>
-            <a href="#contact" className="hover:text-[#08122E]">
-              Contact
-            </a>
+        <section className="mx-auto max-w-7xl px-6 pb-10 lg:px-8">
+          <div className="grid gap-10 border-t border-slate-200 pt-8 text-sm text-slate-500 md:grid-cols-[1fr_auto] md:items-center">
+            <p>© 2026 Proxfi. Tous droits réservés.</p>
+
+            <div className="flex flex-wrap gap-6">
+              <Link href="/mentions-legales" className="transition hover:text-[#08122E]">
+                Mentions légales
+              </Link>
+              <Link href="/a-propos" className="transition hover:text-[#08122E]">
+                À propos
+              </Link>
+              <a href="#contact" className="transition hover:text-[#08122E]">
+                Contact
+              </a>
+            </div>
           </div>
-        </div>
-      </footer>
+        </section>
+      </main>
     </div>
   );
 }
