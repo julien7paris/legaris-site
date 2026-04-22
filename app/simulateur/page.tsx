@@ -280,7 +280,7 @@ const countryRiskMap: Record<string, CountryRiskLevel> = {
   Kazakhstan: "high",
   Ouzbékistan: "high",
   "Afrique du Sud": "very_high",
-  Nigeria: "veryHigh" as CountryRiskLevel,
+  Nigeria: "very_high",
   Kenya: "very_high",
   Tanzanie: "very_high",
   "Côte d’Ivoire": "very_high",
@@ -592,7 +592,16 @@ export default function SimulateurPage() {
 
   function scrollToForm() {
     const form = document.getElementById("lead-form");
-    form?.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (!form) return;
+
+    const headerOffset = 120;
+    const elementPosition = form.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
   }
 
   const completionCount = [
@@ -667,7 +676,7 @@ export default function SimulateurPage() {
           <form
             id="lead-form"
             onSubmit={handleSubmit}
-            className="rounded-[32px] border border-slate-200 bg-white p-6 shadow-[0_20px_80px_rgba(15,23,42,0.06)] transition duration-300 hover:shadow-[0_24px_90px_rgba(15,23,42,0.08)] sm:p-8"
+            className="scroll-mt-32 rounded-[32px] border border-slate-200 bg-white p-6 shadow-[0_20px_80px_rgba(15,23,42,0.06)] transition duration-300 hover:shadow-[0_24px_90px_rgba(15,23,42,0.08)] sm:p-8"
           >
             <div className="mb-8 flex items-start justify-between gap-4">
               <div>
