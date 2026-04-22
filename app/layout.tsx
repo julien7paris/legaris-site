@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   description:
     "Conseil stratégique patrimonial pour profils internationaux, expatriés et entrepreneurs.",
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
   },
 };
 
