@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ContactBlock from "@/components/ContactBlock";
+import ContactBlock from "./components/ContactBlock";
 
 export default function ExpatDeFiLandingPage() {
   const services = [
