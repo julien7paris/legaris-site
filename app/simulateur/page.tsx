@@ -604,11 +604,15 @@ export default function SimulateurPage() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
-      <header className="border-b border-slate-200/80 bg-white/90 backdrop-blur">
+      <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           <a href="/" className="flex items-center gap-3 transition hover:opacity-90">
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#08122E] text-sm font-semibold text-white shadow-sm ring-1 ring-[#F4D000]/20">
-              P
+            <div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-2xl bg-[linear-gradient(135deg,#F4F7FB,#FFFFFF)] shadow-sm ring-1 ring-[#F4D000]/20">
+              <img
+                src="/images/logo-proxfi.png"
+                alt="Logo Proxfi"
+                className="h-full w-full object-cover"
+              />
             </div>
             <div>
               <p className="text-sm font-semibold tracking-tight text-[#08122E]">Proxfi</p>
