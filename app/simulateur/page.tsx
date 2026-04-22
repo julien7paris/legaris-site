@@ -280,7 +280,7 @@ const countryRiskMap: Record<string, CountryRiskLevel> = {
   Kazakhstan: "high",
   Ouzbékistan: "high",
   "Afrique du Sud": "very_high",
-  Nigeria: "very_high",
+  Nigeria: "veryHigh" as CountryRiskLevel,
   Kenya: "very_high",
   Tanzanie: "very_high",
   "Côte d’Ivoire": "very_high",
@@ -604,31 +604,6 @@ export default function SimulateurPage() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
-      <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <a href="/" className="flex items-center gap-3 transition hover:opacity-90">
-            <div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-2xl bg-[linear-gradient(135deg,#F4F7FB,#FFFFFF)] shadow-sm ring-1 ring-[#F4D000]/20">
-              <img
-                src="/images/logo-proxfi.png"
-                alt="Logo Proxfi"
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div>
-              <p className="text-sm font-semibold tracking-tight text-[#08122E]">Proxfi</p>
-              <p className="text-xs text-slate-500">Simulateur stratégique</p>
-            </div>
-          </a>
-
-          <a
-            href="/"
-            className="rounded-full border border-slate-300 bg-white px-5 py-2.5 text-sm font-medium text-slate-700 transition duration-200 hover:-translate-y-0.5 hover:border-[#5FAE7B]/40 hover:bg-[#F8FBFF]"
-          >
-            Retour au site
-          </a>
-        </div>
-      </header>
-
       <main>
         <section className="relative overflow-hidden border-b border-slate-100 bg-[linear-gradient(to_bottom,#ffffff,#f8fbff)]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(15,93,184,0.14),transparent_32%),radial-gradient(circle_at_78%_18%,rgba(95,174,123,0.12),transparent_24%),radial-gradient(circle_at_50%_100%,rgba(244,208,0,0.10),transparent_26%)]" />

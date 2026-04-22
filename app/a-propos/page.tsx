@@ -1,4 +1,4 @@
-import Link from "next/link";
+import ContactBlock from "@/components/ContactBlock";
 
 export default function AProposPage() {
   const values = [
@@ -89,44 +89,6 @@ export default function AProposPage() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
-      <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#08122E] text-white shadow-sm ring-1 ring-[#F4D000]/20">
-              P
-            </div>
-            <div>
-              <p className="text-sm font-semibold tracking-tight text-[#08122E]">Proxfi</p>
-              <p className="text-xs text-slate-500">
-                Expatriation • Allocation d&apos;Actifs • Transmission Entreprise • DeFi Crypto
-              </p>
-            </div>
-          </Link>
-
-          <nav className="hidden items-center gap-8 md:flex">
-            <Link href="/" className="text-sm text-slate-600 transition hover:text-[#0F5DB8]">
-              Accueil
-            </Link>
-            <Link
-              href="/simulateur"
-              className="text-sm text-slate-600 transition hover:text-[#0F5DB8]"
-            >
-              Simulateur
-            </Link>
-            <Link href="/a-propos" className="text-sm font-medium text-[#0F5DB8]">
-              À propos
-            </Link>
-          </nav>
-
-          <a
-            href="#contact"
-            className="rounded-full bg-[#08122E] px-5 py-2.5 text-sm font-medium text-white shadow-[0_10px_30px_rgba(8,18,46,0.18)] transition hover:-translate-y-0.5 hover:bg-[#0F5DB8]"
-          >
-            Réserver un échange
-          </a>
-        </div>
-      </header>
-
       <main>
         <section className="mx-auto max-w-7xl px-6 pt-10 lg:px-8 lg:pt-12">
           <div className="overflow-hidden rounded-[36px] border border-slate-200 bg-[linear-gradient(90deg,#04143D_0%,#0F5DB8_55%,#62B67D_100%)] shadow-[0_24px_80px_rgba(15,23,42,0.10)]">
@@ -360,58 +322,7 @@ export default function AProposPage() {
           </div>
         </section>
 
-        <section id="contact" className="mx-auto max-w-7xl px-6 pb-20 pt-6 lg:px-8">
-          <div className="relative overflow-hidden rounded-[32px] bg-[#08122E] px-8 py-10 text-white shadow-[0_20px_60px_rgba(8,18,46,0.16)] sm:px-10 sm:py-12">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(15,93,184,0.30),transparent_28%),radial-gradient(circle_at_80%_20%,rgba(95,174,123,0.18),transparent_22%),radial-gradient(circle_at_50%_100%,rgba(244,208,0,0.08),transparent_26%)]" />
-
-            <div className="relative grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
-              <div>
-                <p className="text-sm font-medium text-[#2DA2FF]">Parlons de votre projet</p>
-                <h2 className="mt-4 max-w-2xl text-4xl font-semibold tracking-tight text-white">
-                  Une première conversation pour cadrer vos enjeux et vos priorités.
-                </h2>
-                <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-300">
-                  Une approche claire, premium et structurée pour mieux comprendre votre
-                  situation et identifier les prochaines étapes utiles.
-                </p>
-              </div>
-
-              <div className="flex flex-col gap-4">
-                <input
-                  type="text"
-                  placeholder="Votre nom"
-                  className="w-full rounded-2xl border border-white/10 bg-white/8 px-5 py-4 text-sm text-white placeholder:text-slate-400 outline-none backdrop-blur"
-                />
-                <input
-                  type="email"
-                  placeholder="Votre e-mail"
-                  className="w-full rounded-2xl border border-white/10 bg-white/8 px-5 py-4 text-sm text-white placeholder:text-slate-400 outline-none backdrop-blur"
-                />
-                <button className="rounded-2xl bg-[#F0C532] px-6 py-4 text-sm font-semibold text-[#08122E] transition hover:-translate-y-0.5 hover:bg-[#E3BB2E]">
-                  Être recontacté
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-7xl px-6 pb-10 lg:px-8">
-          <div className="grid gap-10 border-t border-slate-200 pt-8 text-sm text-slate-500 md:grid-cols-[1fr_auto] md:items-center">
-            <p>© 2026 Proxfi. Tous droits réservés.</p>
-
-            <div className="flex flex-wrap gap-6">
-              <Link href="/mentions-legales" className="transition hover:text-[#08122E]">
-                Mentions légales
-              </Link>
-              <Link href="/a-propos" className="transition hover:text-[#08122E]">
-                À propos
-              </Link>
-              <a href="#contact" className="transition hover:text-[#08122E]">
-                Contact
-              </a>
-            </div>
-          </div>
-        </section>
+        <ContactBlock />
       </main>
     </div>
   );
