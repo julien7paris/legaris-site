@@ -1,6 +1,6 @@
 export default function ContactBlock() {
   return (
-    <section id="contact" className="mx-auto max-w-7xl px-6 pb-20 lg:px-8">
+    <section id="contact" className="scroll-mt-36 mx-auto max-w-7xl px-6 pb-20 lg:px-8">
       <div className="relative overflow-hidden rounded-[36px] bg-[#08122E] px-8 py-12 text-white sm:px-12 sm:py-14">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(15,93,184,0.28),transparent_28%),radial-gradient(circle_at_80%_20%,rgba(95,174,123,0.18),transparent_24%),radial-gradient(circle_at_50%_100%,rgba(244,208,0,0.12),transparent_26%)]" />
 
