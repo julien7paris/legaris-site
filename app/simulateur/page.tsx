@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
 
 type Profile =
   | "Cadre salarié"
@@ -365,6 +366,8 @@ function getCountrySupportText(country: string, level: CountryRiskLevel): string
 }
 
 export default function SimulateurPage() {
+  const router = useRouter();
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [profile, setProfile] = useState<Profile>("Cadre salarié");
@@ -376,7 +379,6 @@ export default function SimulateurPage() {
   const [businessActivity, setBusinessActivity] = useState(false);
   const [multiCountryIncome, setMultiCountryIncome] = useState(false);
   const [existingAssets, setExistingAssets] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
   const [animatedScore, setAnimatedScore] = useState(0);
 
   const result = useMemo(() => {
@@ -393,10 +395,12 @@ export default function SimulateurPage() {
       score += 18;
       alerts.push("Calendrier resserré : sécuriser rapidement les arbitrages et le séquencement.");
     }
+
     if (horizon === "3 à 12 mois") {
       score += 10;
       alerts.push("Fenêtre active de préparation : opportunité de structurer en amont.");
     }
+
     if (horizon === "12 mois et plus") {
       score += 5;
     }
@@ -404,9 +408,11 @@ export default function SimulateurPage() {
     if (crypto === "Débutant") {
       alerts.push("Présence d’actifs numériques : besoin de pédagogie et de structuration.");
     }
+
     if (crypto === "Intermédiaire") {
       alerts.push("Flux et traçabilité des actifs numériques à intégrer dans la vision d’ensemble.");
     }
+
     if (crypto === "Avancé") {
       alerts.push("Exposition avancée aux actifs numériques : conservation, flux et coordination à cadrer finement.");
     }
@@ -505,16 +511,19 @@ export default function SimulateurPage() {
     }
 
     const uniqueExperts = [...new Set(experts)];
+
     if (crypto !== "Aucune") {
       uniqueExperts.push("Conseil stratégique crypto / conservation");
     }
 
     const finalExperts = [...new Set(uniqueExperts)];
+
     if (finalExperts.length === 0) {
       finalExperts.push("Diagnostic stratégique initial");
     }
 
     let aiAdvice = "";
+
     if (score < 35) {
       aiAdvice =
         "Votre situation semble compatible avec un accompagnement essentiel : l’enjeu principal est de clarifier le calendrier, les priorités et les premiers arbitrages pour avancer avec méthode.";
@@ -527,6 +536,7 @@ export default function SimulateurPage() {
     }
 
     let recommendation = "";
+
     if (score < 35) {
       recommendation =
         "Organiser un cadrage essentiel pour prioriser les sujets, valider le calendrier et identifier les bons interlocuteurs.";
@@ -587,7 +597,30 @@ export default function SimulateurPage() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setSubmitted(true);
+
+    const params = new URLSearchParams({
+      name,
+      email,
+      profile,
+      country: country || "Non précisé",
+      horizon,
+      crypto,
+      objectives,
+      score: String(result.score),
+      level: result.level,
+    });
+
+    if (result.level === "Essentiel") {
+      router.push(`/resultat/essentiel?${params.toString()}`);
+      return;
+    }
+
+    if (result.level === "Optimisé") {
+      router.push(`/resultat/optimise?${params.toString()}`);
+      return;
+    }
+
+    router.push(`/resultat/premium?${params.toString()}`);
   }
 
   function scrollToForm() {
@@ -640,6 +673,7 @@ export default function SimulateurPage() {
                 >
                   Commencer le diagnostic
                 </button>
+
                 <div className="rounded-full border border-slate-200 bg-white px-4 py-3 text-sm text-slate-600 shadow-sm">
                   {completionCount}/4 informations clés renseignées
                 </div>
@@ -658,7 +692,9 @@ export default function SimulateurPage() {
                 >
                   <source src="/family-international.mp4" type="video/mp4" />
                 </video>
+
                 <div className="absolute inset-0 bg-gradient-to-t from-[#08122E]/30 via-transparent to-transparent" />
+
                 <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/20 bg-white/15 p-3 text-white backdrop-blur-md">
                   <p className="text-xs font-medium uppercase tracking-[0.18em] text-white/80">
                     Vision internationale
@@ -694,7 +730,9 @@ export default function SimulateurPage() {
 
             <div className="grid gap-5 md:grid-cols-2">
               <div>
-                <label className="mb-2 block text-sm font-medium text-slate-700">Votre Nom Prénom</label>
+                <label className="mb-2 block text-sm font-medium text-slate-700">
+                  Votre Nom Prénom
+                </label>
                 <input
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -705,7 +743,9 @@ export default function SimulateurPage() {
               </div>
 
               <div>
-                <label className="mb-2 block text-sm font-medium text-slate-700">E-mail</label>
+                <label className="mb-2 block text-sm font-medium text-slate-700">
+                  E-mail
+                </label>
                 <input
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -716,7 +756,9 @@ export default function SimulateurPage() {
               </div>
 
               <div>
-                <label className="mb-2 block text-sm font-medium text-slate-700">Votre profil</label>
+                <label className="mb-2 block text-sm font-medium text-slate-700">
+                  Votre profil
+                </label>
                 <select
                   value={profile}
                   onChange={(e) => setProfile(e.target.value as Profile)}
@@ -730,7 +772,9 @@ export default function SimulateurPage() {
               </div>
 
               <div>
-                <label className="mb-2 block text-sm font-medium text-slate-700">Pays cible</label>
+                <label className="mb-2 block text-sm font-medium text-slate-700">
+                  Pays cible
+                </label>
                 <select
                   value={country}
                   onChange={(e) => setCountry(e.target.value)}
@@ -746,7 +790,9 @@ export default function SimulateurPage() {
               </div>
 
               <div>
-                <label className="mb-2 block text-sm font-medium text-slate-700">Horizon de départ</label>
+                <label className="mb-2 block text-sm font-medium text-slate-700">
+                  Horizon de départ
+                </label>
                 <select
                   value={horizon}
                   onChange={(e) => setHorizon(e.target.value as DepartureHorizon)}
@@ -759,7 +805,9 @@ export default function SimulateurPage() {
               </div>
 
               <div>
-                <label className="mb-2 block text-sm font-medium text-slate-700">Exposition crypto / DeFi</label>
+                <label className="mb-2 block text-sm font-medium text-slate-700">
+                  Exposition crypto / DeFi
+                </label>
                 <select
                   value={crypto}
                   onChange={(e) => setCrypto(e.target.value as CryptoLevel)}
@@ -829,12 +877,6 @@ export default function SimulateurPage() {
             >
               Recevoir une première lecture
             </button>
-
-            {submitted && (
-              <div className="mt-4 rounded-2xl border border-[#5FAE7B]/30 bg-[#ECF8F1] p-4 text-sm text-[#2E7A52]">
-                Merci {name || "beaucoup"} — votre demande a bien été prise en compte.
-              </div>
-            )}
           </form>
 
           <div className="grid gap-6">
@@ -868,12 +910,14 @@ export default function SimulateurPage() {
                   <p className="text-xs uppercase tracking-[0.18em] text-slate-400">Profil</p>
                   <p className="mt-2 text-sm font-medium text-[#08122E]">{profile}</p>
                 </div>
+
                 <div className="rounded-2xl bg-[#F8FBFF] p-4 transition duration-200 hover:bg-[#EEF6FF]">
                   <p className="text-xs uppercase tracking-[0.18em] text-slate-400">Pays</p>
                   <p className="mt-2 text-sm font-medium text-[#08122E]">
                     {country || "Non sélectionné"}
                   </p>
                 </div>
+
                 <div className="rounded-2xl bg-[#F8FBFF] p-4 transition duration-200 hover:bg-[#EEF6FF]">
                   <p className="text-xs uppercase tracking-[0.18em] text-slate-400">Horizon</p>
                   <p className="mt-2 text-sm font-medium text-[#08122E]">{horizon}</p>
@@ -887,7 +931,9 @@ export default function SimulateurPage() {
 
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 <div className="rounded-2xl bg-[#F8FBFF] p-5 transition duration-200 hover:-translate-y-0.5 hover:bg-[#EEF6FF]">
-                  <p className="text-sm font-medium text-[#08122E]">Points d’attention stratégiques</p>
+                  <p className="text-sm font-medium text-[#08122E]">
+                    Points d’attention stratégiques
+                  </p>
                   <ul className="mt-3 space-y-2 text-sm text-slate-600">
                     {result.alerts.length > 0 ? (
                       result.alerts.map((item) => <li key={item}>• {item}</li>)
@@ -898,7 +944,9 @@ export default function SimulateurPage() {
                 </div>
 
                 <div className="rounded-2xl bg-[#F8FBFF] p-5 transition duration-200 hover:-translate-y-0.5 hover:bg-[#EEF6FF]">
-                  <p className="text-sm font-medium text-[#08122E]">Interlocuteurs à mobiliser</p>
+                  <p className="text-sm font-medium text-[#08122E]">
+                    Interlocuteurs à mobiliser
+                  </p>
                   <ul className="mt-3 space-y-2 text-sm text-slate-600">
                     {result.experts.map((item) => (
                       <li key={item}>• {item}</li>
@@ -935,11 +983,14 @@ export default function SimulateurPage() {
       <div className="fixed inset-x-0 bottom-4 z-50 px-4 lg:hidden">
         <div className="mx-auto flex max-w-md items-center justify-between rounded-full border border-slate-200 bg-white/95 px-4 py-3 shadow-2xl backdrop-blur-md">
           <div>
-            <p className="text-xs uppercase tracking-[0.18em] text-slate-400">Lecture actuelle</p>
+            <p className="text-xs uppercase tracking-[0.18em] text-slate-400">
+              Lecture actuelle
+            </p>
             <p className="text-sm font-semibold text-[#08122E]">
               {animatedScore}/100 • {result.level}
             </p>
           </div>
+
           <button
             type="button"
             onClick={scrollToForm}
