@@ -1,9 +1,18 @@
 "use client";
 
 import Link from "next/link";
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
 export default function ResultatEssentielPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-white" />}>
+      <ResultatEssentielContent />
+    </Suspense>
+  );
+}
+
+function ResultatEssentielContent() {
   const searchParams = useSearchParams();
 
   const name = searchParams.get("name") || "";
@@ -22,7 +31,9 @@ export default function ResultatEssentielPage() {
           </p>
 
           <h1 className="mt-6 max-w-4xl text-4xl font-semibold tracking-tight text-[#08122E] sm:text-5xl">
-            {name ? `${name}, votre projet nécessite d’abord une clarification.` : "Votre projet nécessite d’abord une clarification."}
+            {name
+              ? `${name}, votre projet nécessite d’abord une clarification.`
+              : "Votre projet nécessite d’abord une clarification."}
           </h1>
 
           <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
@@ -57,6 +68,7 @@ export default function ResultatEssentielPage() {
           <h2 className="text-2xl font-semibold text-[#08122E]">
             Ressources recommandées
           </h2>
+
           <ul className="mt-5 space-y-3 text-sm leading-7 text-slate-600">
             <li>• Checklist expatriation patrimoniale avant départ.</li>
             <li>• Les erreurs fréquentes lors d’un changement de résidence fiscale.</li>
@@ -88,7 +100,9 @@ export default function ResultatEssentielPage() {
 function Card({ label, value }: { label: string; value: string }) {
   return (
     <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
-      <p className="text-xs uppercase tracking-[0.18em] text-slate-400">{label}</p>
+      <p className="text-xs uppercase tracking-[0.18em] text-slate-400">
+        {label}
+      </p>
       <p className="mt-2 text-lg font-semibold text-[#08122E]">{value}</p>
     </div>
   );

@@ -1,9 +1,18 @@
 "use client";
 
 import Link from "next/link";
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
 export default function ResultatPremiumPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-[#08122E]" />}>
+      <ResultatPremiumContent />
+    </Suspense>
+  );
+}
+
+function ResultatPremiumContent() {
   const searchParams = useSearchParams();
 
   const name = searchParams.get("name") || "";
@@ -24,7 +33,9 @@ export default function ResultatPremiumPage() {
           </p>
 
           <h1 className="mt-6 max-w-4xl text-4xl font-semibold tracking-tight sm:text-5xl">
-            {name ? `${name}, votre situation appelle un cadrage stratégique prioritaire.` : "Votre situation appelle un cadrage stratégique prioritaire."}
+            {name
+              ? `${name}, votre situation appelle un cadrage stratégique prioritaire.`
+              : "Votre situation appelle un cadrage stratégique prioritaire."}
           </h1>
 
           <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
@@ -69,7 +80,9 @@ export default function ResultatPremiumPage() {
           <div className="absolute -bottom-20 left-0 h-52 w-52 rounded-full bg-[#0F5DB8]/20 blur-3xl" />
 
           <div className="relative">
-            <p className="text-sm font-medium text-[#0F5DB8]">Action recommandée</p>
+            <p className="text-sm font-medium text-[#0F5DB8]">
+              Action recommandée
+            </p>
 
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
               Demander un échange stratégique direct.
@@ -87,7 +100,10 @@ export default function ResultatPremiumPage() {
             </a>
 
             <div className="mt-4">
-              <Link href="/simulateur" className="text-sm text-slate-500 underline-offset-4 hover:underline">
+              <Link
+                href="/simulateur"
+                className="text-sm text-slate-500 underline-offset-4 hover:underline"
+              >
                 Refaire le simulateur
               </Link>
             </div>
@@ -101,7 +117,9 @@ export default function ResultatPremiumPage() {
 function Card({ label, value }: { label: string; value: string }) {
   return (
     <div className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur">
-      <p className="text-xs uppercase tracking-[0.18em] text-slate-300">{label}</p>
+      <p className="text-xs uppercase tracking-[0.18em] text-slate-300">
+        {label}
+      </p>
       <p className="mt-2 text-lg font-semibold text-white">{value}</p>
     </div>
   );

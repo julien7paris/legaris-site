@@ -1,9 +1,18 @@
 "use client";
 
 import Link from "next/link";
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
 export default function ResultatOptimisePage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-white" />}>
+      <ResultatOptimiseContent />
+    </Suspense>
+  );
+}
+
+function ResultatOptimiseContent() {
   const searchParams = useSearchParams();
 
   const name = searchParams.get("name") || "";
@@ -23,7 +32,9 @@ export default function ResultatOptimisePage() {
           </p>
 
           <h1 className="mt-6 max-w-4xl text-4xl font-semibold tracking-tight text-[#08122E] sm:text-5xl">
-            {name ? `${name}, votre situation mérite un échange de cadrage.` : "Votre situation mérite un échange de cadrage."}
+            {name
+              ? `${name}, votre situation mérite un échange de cadrage.`
+              : "Votre situation mérite un échange de cadrage."}
           </h1>
 
           <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
@@ -67,7 +78,10 @@ export default function ResultatOptimisePage() {
           <div className="absolute -bottom-20 left-0 h-52 w-52 rounded-full bg-[#5FAE7B]/20 blur-3xl" />
 
           <div className="relative">
-            <p className="text-sm font-medium text-[#B8D7FF]">Recommandation</p>
+            <p className="text-sm font-medium text-[#B8D7FF]">
+              Recommandation
+            </p>
+
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
               Planifier un premier échange de cadrage.
             </h2>
@@ -84,7 +98,10 @@ export default function ResultatOptimisePage() {
             </a>
 
             <div className="mt-4">
-              <Link href="/simulateur" className="text-sm text-slate-300 underline-offset-4 hover:underline">
+              <Link
+                href="/simulateur"
+                className="text-sm text-slate-300 underline-offset-4 hover:underline"
+              >
                 Refaire le simulateur
               </Link>
             </div>
@@ -98,7 +115,9 @@ export default function ResultatOptimisePage() {
 function Card({ label, value }: { label: string; value: string }) {
   return (
     <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
-      <p className="text-xs uppercase tracking-[0.18em] text-slate-400">{label}</p>
+      <p className="text-xs uppercase tracking-[0.18em] text-slate-400">
+        {label}
+      </p>
       <p className="mt-2 text-lg font-semibold text-[#08122E]">{value}</p>
     </div>
   );
